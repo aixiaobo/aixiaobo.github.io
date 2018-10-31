@@ -1,84 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title>Django入门项目(第一部分：请求与响应)</title>
-      <link href="/2018/10/31/Django%E5%85%A5%E9%97%A8%E9%A1%B9%E7%9B%AE-%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/"/>
-      <url>/2018/10/31/Django%E5%85%A5%E9%97%A8%E9%A1%B9%E7%9B%AE-%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/</url>
-      
-        <content type="html"><![CDATA[<p>终端执行：py -m django –version(查看Django版本)<br>一、创建一个文件夹管理django项目文件<br>二、创建项目 Django-admin startproject mysite(项目名称)<br>三、启动项目的web服务器。在项目的根目录中执行: py manage.py runserver<br>(默认端口为8000，默认访问ip为本地。本地ip一般为127.0.0.1或者localhost  可以指定端口 py manage.py runserver 8000(端口号/0：端口号)<br>四、创建一个app py manage.py startapp polls<br>五、打开文件polls/views.py 并在加入以下Python代码：<br>    from django.http import HttpResponse<br>    def index(request):<br>        return HttpResponse(“Hello, Word.”)<br>六、在polls/views.py 文件中加入以下代码：<br>        from django.http import HttpResponse<br>        def index(request):<br>            return HttpResponse(“Hello, world.”)<br>七、在mysite/urls.py 文件中输入：<br>        from django.contrib import admin<br>        from django.urls import path, include</p><pre><code>urlpatterns = [    path(&apos;polls/&apos;, include(&apos;polls.urls&apos;))    path(&apos;admin/&apos;,admin.site.urls)]</code></pre><p>八、在项目根目录中执行： py manage.py runserver<br>(在浏览器中执行<a href="http://127.0.0.1:8000/polls/" target="_blank" rel="noopener">http://127.0.0.1:8000/polls/</a> (在Starting development server 显示的http地址，这里我执行显示的是<a href="http://127.0.0.1:8000/polls" target="_blank" rel="noopener">http://127.0.0.1:8000/polls</a> ))，一切正常的话你将看到“Hello, world”</p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[Django入门项目(第一部分：请求与响应)]]></title>
+    <url>%2F2018%2F10%2F31%2FDjango%E5%85%A5%E9%97%A8%E9%A1%B9%E7%9B%AE-%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94%2F</url>
+    <content type="text"><![CDATA[终端执行：py -m django --version(查看Django版本) 一、创建一个文件夹管理django项目文件 二、创建项目 Django-admin startproject mysite(项目名称) 三、启动项目的web服务器。在项目的根目录中执行: py manage.py runserver (默认端口为8000，默认访问ip为本地。本地ip一般为127.0.0.1或者localhost 可以指定端口 py manage.py runserver 8000(端口号/0：端口号) 四、创建一个app py manage.py startapp polls 五、打开文件polls/views.py 并在加入以下Python代码： from django.http import HttpResponse def index(request): return HttpResponse(&quot;Hello, Word.&quot;) 六、在polls/views.py 文件中加入以下代码： from django.http import HttpResponse def index(request): return HttpResponse(&quot;Hello, world.&quot;) 七、在mysite/urls.py 文件中输入： from django.contrib import admin from django.urls import path, include urlpatterns = [ path(&apos;polls/&apos;, include(&apos;polls.urls&apos;)) path(&apos;admin/&apos;,admin.site.urls) ] 八、在项目根目录中执行： py manage.py runserver (在浏览器中执行http://127.0.0.1:8000/polls/ (在Starting development server显示的http地址，这里我执行显示的是http://127.0.0.1:8000/polls ))，一切正常的话你将看到“Hello, world”]]></content>
       <categories>
-          
-          <category> Django </category>
-          
+        <category>Django</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Django </tag>
-            
-            <tag> 入门 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>黑白五子棋-self版</title>
-      <link href="/2018/10/27/wuziqi/"/>
-      <url>/2018/10/27/wuziqi/</url>
-      
-        <content type="html"><![CDATA[<!DOCTYPE html><html><head>    <meta charset="utf-8">    <title>五子棋</title>    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->    <style>    canvas{display: block;margin: 50px auto;box-shadow: -2px -2px 2px #EFEFEF, 5px 5px 5px #B9B9B9;}.restart{text-align: center;}.restart>span{display: inline-block;padding: 10px 20px;color: #fff;background-color: #C92027;border-radius: 5px;}    </style></head><body>    <div>        <h3>黑白五子棋-self版</h3>    </div>    <canvas id="chess" width="450px" height="450px"></canvas>    <div id="restart" class="restart">            <span>重新开始</span>        </div></body></html><script>//判断是否结束var over = false;//判断落子方var me = true; //我var chressBord = [];//棋盘for(var i = 0; i < 15; i++){    chressBord[i] = [];    for(var j = 0; j < 15; j++){        chressBord[i][j] = 0;    }}//赢法的统计数组var myWin = [];var computerWin = [];//赢法数组var wins = [];for(var i = 0; i < 15; i++){    wins[i] = [];    for(var j = 0; j < 15; j++){        wins[i][j] = [];    }}var count = 0; //赢法总数//横线赢法for(var i = 0; i < 15; i++){    for(var j = 0; j < 11; j++){        for(var k = 0; k < 5; k++){            wins[i][j+k][count] = true;        }        count++;    }}//竖线赢法for(var i = 0; i < 15; i++){    for(var j = 0; j < 11; j++){        for(var k = 0; k < 5; k++){            wins[j+k][i][count] = true;        }        count++;    }}//正斜线赢法for(var i = 0; i < 11; i++){    for(var j = 0; j < 11; j++){        for(var k = 0; k < 5; k++){            wins[i+k][j+k][count] = true;        }        count++;    }}//反斜线赢法for(var i = 0; i < 11; i++){    for(var j = 14; j > 3; j--){        for(var k = 0; k < 5; k++){            wins[i+k][j-k][count] = true;        }        count++;    }}for(var i = 0; i < count; i++){    myWin[i] = 0;    computerWin[i] = 0;}//获得canvas对象var chess = document.getElementById("chess");var context = chess.getContext('2d');context.strokeStyle = '#bfbfbf'; //边框颜色var logo = new Image();logo.src = 'https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=3854101686,5663584&fm=202&src=766&mola=new&crop=v1';logo.onload  = function(){    context.drawImage(logo,0,0,450,450);    drawChessBoard();}document.getElementById("restart").onclick = function(){    window.location.reload();}chess.onclick = function(e){    if(over){        return;    }    if(!me){        return;    }    var x = e.offsetX;    var y = e.offsetY;    var i = Math.floor(x / 30);    var j = Math.floor(y / 30);    if(chressBord[i][j] == 0){        oneStep(i,j,me);        chressBord[i][j] = 1;//我                for(var k = 0; k < count; k++){            if(wins[i][j][k]){                myWin[k]++;                computerWin[k] = 6;//这个位置对方不可能赢了                if(myWin[k] == 5){                    window.alert('你赢了');                    over = true;                }            }        }        if(!over){            me = !me;            computerAI();        }    }}//计算机下棋var computerAI = function (){    var myScore = [];    var computerScore = [];    var max = 0;    var u = 0, v = 0;    for(var i = 0; i < 15; i++){        myScore[i] = [];        computerScore[i] = [];        for(var j = 0; j < 15; j++){            myScore[i][j] = 0;            computerScore[i][j] = 0;        }    }    for(var i = 0; i < 15; i++){        for(var j = 0; j < 15; j++){            if(chressBord[i][j] == 0){                for(var k = 0; k < count; k++){                    if(wins[i][j][k]){                        if(myWin[k] == 1){                            myScore[i][j] += 200;                        }else if(myWin[k] == 2){                            myScore[i][j] += 400;                        }else if(myWin[k] == 3){                            myScore[i][j] += 2000;                        }else if(myWin[k] == 4){                            myScore[i][j] += 10000;                        }                        if(computerWin[k] == 1){                            computerScore[i][j] += 220;                        }else if(computerWin[k] == 2){                            computerScore[i][j] += 420;                        }else if(computerWin[k] == 3){                            computerScore[i][j] += 2100;                        }else if(computerWin[k] == 4){                            computerScore[i][j] += 20000;                        }                                            }                }                if(myScore[i][j] > max){                    max  = myScore[i][j];                    u = i;                    v = j;                }else if(myScore[i][j] == max){                    if(computerScore[i][j] > computerScore[u][v]){                        u = i;                        v = j;                        }                }                if(computerScore[i][j] > max){                    max  = computerScore[i][j];                    u = i;                    v = j;                }else if(computerScore[i][j] == max){                    if(myScore[i][j] > myScore[u][v]){                        u = i;                        v = j;                        }                }            }        }    }    oneStep(u,v,false);    chressBord[u][v] = 2;    for(var k = 0; k < count; k++){        if(wins[u][v][k]){            computerWin[k]++;            myWin[k] = 6;//这个位置对方不可能赢了            if(computerWin[k] == 5){                window.alert('艾小博赢了');                over = true;            }        }    }    if(!over){        me = !me;    }}//绘画棋盘var drawChessBoard = function(){    for(var i = 0; i < 15; i++){        context.moveTo(15 + i * 30 , 15);        context.lineTo(15 + i * 30 , 435);        context.stroke();        context.moveTo(15 , 15 + i * 30);        context.lineTo(435 , 15 + i * 30);        context.stroke();    }}//画旗子var oneStep = function(i,j,me){    context.beginPath();    context.arc(15 + i * 30, 15 + j * 30, 13, 0, 2 * Math.PI);//画圆    context.closePath();    //渐变    var gradient = context.createRadialGradient(15 + i * 30 + 2, 15 + j * 30 - 2, 13, 15 + i * 30 + 2, 15 + j * 30 - 2, 0);    if(me){        gradient.addColorStop(0,'#0a0a0a');        gradient.addColorStop(1,'#636766');    }else{        gradient.addColorStop(0,'#d1d1d1');        gradient.addColorStop(1,'#f9f9f9');    }    context.fillStyle = gradient;    context.fill();}</script>]]></content>
-      
-      
+      <tags>
+        <tag>Django</tag>
+        <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[黑白五子棋-self版]]></title>
+    <url>%2F2018%2F10%2F27%2Fwuziqi%2F</url>
+    <content type="text"><![CDATA[五子棋 canvas{ display: block; margin: 50px auto; box-shadow: -2px -2px 2px #EFEFEF, 5px 5px 5px #B9B9B9; } .restart{ text-align: center; } .restart>span{ display: inline-block; padding: 10px 20px; color: #fff; background-color: #C92027; border-radius: 5px; } 黑白五子棋-self版 重新开始 //判断是否结束 var over = false; //判断落子方 var me = true; //我 var chressBord = [];//棋盘 for(var i = 0; i < 15; i++){ chressBord[i] = []; for(var j = 0; j < 15; j++){ chressBord[i][j] = 0; } } //赢法的统计数组 var myWin = []; var computerWin = []; //赢法数组 var wins = []; for(var i = 0; i < 15; i++){ wins[i] = []; for(var j = 0; j < 15; j++){ wins[i][j] = []; } } var count = 0; //赢法总数 //横线赢法 for(var i = 0; i < 15; i++){ for(var j = 0; j < 11; j++){ for(var k = 0; k < 5; k++){ wins[i][j+k][count] = true; } count++; } } //竖线赢法 for(var i = 0; i < 15; i++){ for(var j = 0; j < 11; j++){ for(var k = 0; k < 5; k++){ wins[j+k][i][count] = true; } count++; } } //正斜线赢法 for(var i = 0; i < 11; i++){ for(var j = 0; j < 11; j++){ for(var k = 0; k < 5; k++){ wins[i+k][j+k][count] = true; } count++; } } //反斜线赢法 for(var i = 0; i < 11; i++){ for(var j = 14; j > 3; j--){ for(var k = 0; k < 5; k++){ wins[i+k][j-k][count] = true; } count++; } } for(var i = 0; i < count; i++){ myWin[i] = 0; computerWin[i] = 0; } //获得canvas对象 var chess = document.getElementById("chess"); var context = chess.getContext('2d'); context.strokeStyle = '#bfbfbf'; //边框颜色 var logo = new Image(); logo.src = 'https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=3854101686,5663584&fm=202&src=766&mola=new&crop=v1'; logo.onload = function(){ context.drawImage(logo,0,0,450,450); drawChessBoard(); } document.getElementById("restart").onclick = function(){ window.location.reload(); } chess.onclick = function(e){ if(over){ return; } if(!me){ return; } var x = e.offsetX; var y = e.offsetY; var i = Math.floor(x / 30); var j = Math.floor(y / 30); if(chressBord[i][j] == 0){ oneStep(i,j,me); chressBord[i][j] = 1;//我 for(var k = 0; k < count; k++){ if(wins[i][j][k]){ myWin[k]++; computerWin[k] = 6;//这个位置对方不可能赢了 if(myWin[k] == 5){ window.alert('你赢了'); over = true; } } } if(!over){ me = !me; computerAI(); } } } //计算机下棋 var computerAI = function (){ var myScore = []; var computerScore = []; var max = 0; var u = 0, v = 0; for(var i = 0; i < 15; i++){ myScore[i] = []; computerScore[i] = []; for(var j = 0; j < 15; j++){ myScore[i][j] = 0; computerScore[i][j] = 0; } } for(var i = 0; i < 15; i++){ for(var j = 0; j < 15; j++){ if(chressBord[i][j] == 0){ for(var k = 0; k < count; k++){ if(wins[i][j][k]){ if(myWin[k] == 1){ myScore[i][j] += 200; }else if(myWin[k] == 2){ myScore[i][j] += 400; }else if(myWin[k] == 3){ myScore[i][j] += 2000; }else if(myWin[k] == 4){ myScore[i][j] += 10000; } if(computerWin[k] == 1){ computerScore[i][j] += 220; }else if(computerWin[k] == 2){ computerScore[i][j] += 420; }else if(computerWin[k] == 3){ computerScore[i][j] += 2100; }else if(computerWin[k] == 4){ computerScore[i][j] += 20000; } } } if(myScore[i][j] > max){ max = myScore[i][j]; u = i; v = j; }else if(myScore[i][j] == max){ if(computerScore[i][j] > computerScore[u][v]){ u = i; v = j; } } if(computerScore[i][j] > max){ max = computerScore[i][j]; u = i; v = j; }else if(computerScore[i][j] == max){ if(myScore[i][j] > myScore[u][v]){ u = i; v = j; } } } } } oneStep(u,v,false); chressBord[u][v] = 2; for(var k = 0; k < count; k++){ if(wins[u][v][k]){ computerWin[k]++; myWin[k] = 6;//这个位置对方不可能赢了 if(computerWin[k] == 5){ window.alert('艾小博赢了'); over = true; } } } if(!over){ me = !me; } } //绘画棋盘 var drawChessBoard = function(){ for(var i = 0; i < 15; i++){ context.moveTo(15 + i * 30 , 15); context.lineTo(15 + i * 30 , 435); context.stroke(); context.moveTo(15 , 15 + i * 30); context.lineTo(435 , 15 + i * 30); context.stroke(); } } //画旗子 var oneStep = function(i,j,me){ context.beginPath(); context.arc(15 + i * 30, 15 + j * 30, 13, 0, 2 * Math.PI);//画圆 context.closePath(); //渐变 var gradient = context.createRadialGradient(15 + i * 30 + 2, 15 + j * 30 - 2, 13, 15 + i * 30 + 2, 15 + j * 30 - 2, 0); if(me){ gradient.addColorStop(0,'#0a0a0a'); gradient.addColorStop(1,'#636766'); }else{ gradient.addColorStop(0,'#d1d1d1'); gradient.addColorStop(1,'#f9f9f9'); } context.fillStyle = gradient; context.fill(); }]]></content>
       <categories>
-          
-          <category> html </category>
-          
+        <category>html</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-            <tag> Javascript </tag>
-            
-            <tag> 五子棋 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>时钟</title>
-      <link href="/2018/10/26/clock/"/>
-      <url>/2018/10/26/clock/</url>
-      
-        <content type="html"><![CDATA[<!DOCTYPE html><html><head><title>时钟</title><meta charset="utf-8"><style type="text/css">body{background-color: lightblue;}.box{width: 400px;height: 400px;border-radius: 50%;background-image: linear-gradient(to right bottom,red,orange,yellow,green,blue,purple);/*阴影inset  ： 内阴影第一个值：影子水平方向的偏移量第二个值：影子垂直方向的偏移量第三个值：阴影模糊度第四个值：阴影半径第五个值：阴影颜色*//*box-shadow:  8px 10px 5px 10px ;*/margin: 200px auto;position: relative;background-image: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1936864453,146348825&fm=200&gp=0.jpg);background-size: 100% 100%;}#clock{width: 350px;height: 350px;background-color: white;border-radius: 50%;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;background-size: 100% 100%;}.dot{width: 3px;height: 350px;/*background-color: blue;*/position: absolute;left: 171px;/*animation: xz 60s infinite linear;*/background-image: linear-gradient(to bottom,black ,black 10px,transparent 10px ,transparent 340px,black 340px,black);}.dot:nth-child(5n+1){width: 6px;background-image: linear-gradient(to bottom,black ,black 17px,transparent 17px ,transparent 333px,black 333px,black);left: 171px;}@keyframes xz{0%{transform: rotate(0deg);}100%{transform: rotate(360deg);}}.num{width: 20px;height: 158px;/*background-color: yellow;*/position: absolute;left: 165px;bottom: 175px;transform-origin: center bottom;}.num>div{text-align: center;/*background-color: red;*/line-height: 20px;}#hour{width: 10px;height: 70px;background-color: rgba(0,0,255,0.5);position: absolute;bottom: 200px;left: 195px;transform-origin: center bottom;border-radius: 5px;}#minute{width: 6px;height: 90px;background-color: rgba(0,255,255,0.5);position: absolute;bottom: 200px;left: 197px;transform-origin: center bottom;border-radius: 3px;}#second{width: 4px;height: 110px;background-color: rgba(255,0,0,0.5);position: absolute;bottom: 200px;left: 198px;transform-origin: center bottom;border-radius: 50%;}#qiu{width: 20px;height: 20px;border-radius: 10px;background-color: black;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;}</style></head><body><h3>时钟</h3><div class="box"><div id="clock"></div><div id="hour"></div><div id="minute"></div><div id="second"></div><div id="qiu"></div></div></body></html><script type="text/javascript">var clockDiv = document.getElementById("clock");for (var i = 0; i < 30; i++) {// 创建元素var div = document.createElement("div");// 给元素添加类名div.className = "dot";var s = " rotate(" + i * 6 +"deg)";// if (i % 5 ==0) {// div.style.width = "6px";// }div.style.transform = s;clockDiv.appendChild(div);}// 添加数字for (var i = 1; i <= 12; i++) {// 创建 class 为 num 的 divvar numDiv = document.createElement("div");numDiv.className = "num";var inDiv = document.createElement("div");// 给 inDiv 添加内容 inDiv.innerHTML = i;// numDiv.style.transform.origin = "50% calc(" + 50% + 158 + "px)";numDiv.style.transform = "rotate(" + i * 30 +"deg)";inDiv.style.transform = "rotate(" + i *  -30 +"deg)";numDiv.appendChild(inDiv);clockDiv.appendChild(numDiv);}// 获取时针、分针、秒针var hourDiv = document.getElementById("hour");var minuteDiv = document.getElementById("minute");var secondDiv = document.getElementById("second");function click(){// 获取时间对象var date = new Date();// 获取时、分、秒var h = date.getHours();var m = date.getMinutes();var s = date.getSeconds();// 秒针旋转的角度secondDiv.style.transform = "rotate(" + s * 6 +"deg)";minuteDiv.style.transform = "rotate(" + (m * 6 + s * 6 / 60) +"deg)";hourDiv.style.transform = "rotate(" + (h * 30 + m * 0.5) +"deg)";}click();// 定时器setInterval(click,500);</script>]]></content>
-      
-      
+      <tags>
+        <tag>html</tag>
+        <tag>Javascript</tag>
+        <tag>五子棋</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[时钟]]></title>
+    <url>%2F2018%2F10%2F26%2Fclock%2F</url>
+    <content type="text"><![CDATA[时钟 body{ background-color: lightblue; } .box{ width: 400px; height: 400px; border-radius: 50%; background-image: linear-gradient(to right bottom,red,orange,yellow,green,blue,purple); /* 阴影 inset ： 内阴影 第一个值：影子水平方向的偏移量 第二个值：影子垂直方向的偏移量 第三个值：阴影模糊度 第四个值：阴影半径 第五个值：阴影颜色 */ /*box-shadow: 8px 10px 5px 10px ;*/ margin: 200px auto; position: relative; background-image: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1936864453,146348825&fm=200&gp=0.jpg); background-size: 100% 100%; } #clock{ width: 350px; height: 350px; background-color: white; border-radius: 50%; position: absolute; top: 0;bottom: 0;left: 0;right: 0; margin: auto; background-size: 100% 100%; } .dot{ width: 3px; height: 350px; /*background-color: blue;*/ position: absolute; left: 171px; /*animation: xz 60s infinite linear;*/ background-image: linear-gradient(to bottom,black ,black 10px,transparent 10px ,transparent 340px,black 340px,black); } .dot:nth-child(5n+1){ width: 6px; background-image: linear-gradient(to bottom,black ,black 17px,transparent 17px ,transparent 333px,black 333px,black); left: 171px; } @keyframes xz{ 0%{ transform: rotate(0deg); } 100%{ transform: rotate(360deg); } } .num{ width: 20px; height: 158px; /*background-color: yellow;*/ position: absolute; left: 165px; bottom: 175px; transform-origin: center bottom; } .num>div{ text-align: center; /*background-color: red;*/ line-height: 20px; } #hour{ width: 10px; height: 70px; background-color: rgba(0,0,255,0.5); position: absolute; bottom: 200px; left: 195px; transform-origin: center bottom; border-radius: 5px; } #minute{ width: 6px; height: 90px; background-color: rgba(0,255,255,0.5); position: absolute; bottom: 200px; left: 197px; transform-origin: center bottom; border-radius: 3px; } #second{ width: 4px; height: 110px; background-color: rgba(255,0,0,0.5); position: absolute; bottom: 200px; left: 198px; transform-origin: center bottom; border-radius: 50%; } #qiu{ width: 20px; height: 20px; border-radius: 10px; background-color: black; position: absolute; top: 0;bottom: 0;left: 0;right: 0; margin: auto; } 时钟 var clockDiv = document.getElementById("clock"); for (var i = 0; i < 30; i++) { // 创建元素 var div = document.createElement("div"); // 给元素添加类名 div.className = "dot"; var s = " rotate(" + i * 6 +"deg)"; // if (i % 5 ==0) { // div.style.width = "6px"; // } div.style.transform = s; clockDiv.appendChild(div); } // 添加数字 for (var i = 1; i]]></content>
       <categories>
-          
-          <category> html </category>
-          
+        <category>html</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-            <tag> 时钟 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-  
-  
+      <tags>
+        <tag>html</tag>
+        <tag>时钟</tag>
+      </tags>
+  </entry>
 </search>

@@ -464,13 +464,39 @@
       
         
           
-            <p>终端执行：py -m django –version(查看Django版本)<br>一、创建一个文件夹管理django项目文件<br>二、创建项目 Django-admin startproject mysite(项目名称)<br>三、启动项目的web服务器。在项目的根目录中执行: py manage.py runserver<br>(默认端口为8000，默认访问ip为本地。本地ip一般为127.0.0.1或者localhost  可以指定端口 py manage.py runserver 8000(端口号/0：端口号)<br>四、创建一个app py manage.py startapp polls<br>五、打开文件polls/views.py 并在加入以下Python代码：<br>    from django.http import HttpResponse<br>    def index(request):<br>        return HttpResponse(“Hello, Word.”)<br>六、在polls/views.py 文件中加入以下代码：<br>        from django.http import HttpResponse<br>        def index(request):<br>            return HttpResponse(“Hello, world.”)<br>七、在mysite/urls.py 文件中输入：<br>        from django.contrib import admin<br>        from django.urls import path, include</p>
-<pre><code>urlpatterns = [
-    path(&apos;polls/&apos;, include(&apos;polls.urls&apos;))
-    path(&apos;admin/&apos;,admin.site.urls)
-]
-</code></pre><p>八、在项目根目录中执行： py manage.py runserver<br>(在浏览器中执行<a href="http://127.0.0.1:8000/polls/" target="_blank" rel="noopener">http://127.0.0.1:8000/polls/</a> (在Starting development server 显示的http地址，这里我执行显示的是<a href="http://127.0.0.1:8000/polls" target="_blank" rel="noopener">http://127.0.0.1:8000/polls</a> ))，一切正常的话你将看到“Hello, world”</p>
+            <pre><code>终端执行：py -m django --version(查看Django版本)
 
+一、创建一个文件夹管理django项目文件
+
+二、创建项目 Django-admin startproject mysite(项目名称)
+
+三、启动项目的web服务器。在项目的根目录中执行: py manage.py runserver
+(默认端口为8000，默认访问ip为本地。本地ip一般为127.0.0.1或者localhost  可以指定端口 py manage.py runserver 8000(端口号/0：端口号)
+
+四、创建一个app py manage.py startapp polls
+
+五、打开文件polls/views.py 并在加入以下Python代码：
+    from django.http import HttpResponse
+    def index(request):
+        return HttpResponse(&quot;Hello, Word.&quot;)
+
+六、在polls/views.py 文件中加入以下代码：
+        from django.http import HttpResponse
+        def index(request):
+            return HttpResponse(&quot;Hello, world.&quot;)
+
+七、在mysite/urls.py 文件中输入：
+        from django.contrib import admin
+        from django.urls import path, include
+
+        urlpatterns = [
+            path(&apos;polls/&apos;, include(&apos;polls.urls&apos;))
+            path(&apos;admin/&apos;,admin.site.urls)
+        ]
+
+八、在项目根目录中执行： py manage.py runserver
+(在浏览器中执行http://127.0.0.1:8000/polls/ (在Starting development server显示的http地址，这里我执行显示的是http://127.0.0.1:8000/polls ))，一切正常的话你将看到“Hello, world”
+</code></pre>
           
         
       
