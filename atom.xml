@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aixiaobo.github.io/"/>
-  <updated>2018-10-28T03:59:44.582Z</updated>
+  <updated>2018-10-31T11:26:35.695Z</updated>
   <id>http://aixiaobo.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Django入门项目(第一部分：请求与响应)</title>
+    <link href="http://aixiaobo.github.io/2018/10/31/django/"/>
+    <id>http://aixiaobo.github.io/2018/10/31/django/</id>
+    <published>2018-10-31T12:52:56.000Z</published>
+    <updated>2018-10-31T11:26:35.695Z</updated>
+    
+    <content type="html"><![CDATA[<p>python - m django –version 查看Django版本</p><p>django-admin startproject mysit</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;python - m django –version 查看Django版本&lt;/p&gt;
+&lt;p&gt;django-admin startproject mysit&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="Django" scheme="http://aixiaobo.github.io/categories/Django/"/>
+    
+    
+      <category term="Django" scheme="http://aixiaobo.github.io/tags/Django/"/>
+    
+      <category term="入门" scheme="http://aixiaobo.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>黑白五子棋-self版</title>
