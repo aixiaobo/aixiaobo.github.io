@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aixiaobo.github.io/"/>
-  <updated>2018-10-31T11:26:35.695Z</updated>
+  <updated>2018-10-31T12:06:17.135Z</updated>
   <id>http://aixiaobo.github.io/</id>
   
   <author>
@@ -18,20 +18,18 @@
   
   <entry>
     <title>Django入门项目(第一部分：请求与响应)</title>
-    <link href="http://aixiaobo.github.io/2018/10/31/django/"/>
-    <id>http://aixiaobo.github.io/2018/10/31/django/</id>
-    <published>2018-10-31T12:52:56.000Z</published>
-    <updated>2018-10-31T11:26:35.695Z</updated>
+    <link href="http://aixiaobo.github.io/2018/10/31/Django%E5%85%A5%E9%97%A8%E9%A1%B9%E7%9B%AE-%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/"/>
+    <id>http://aixiaobo.github.io/2018/10/31/Django入门项目-第一部分：请求与响应/</id>
+    <published>2018-10-31T11:32:27.000Z</published>
+    <updated>2018-10-31T12:06:17.135Z</updated>
     
-    <content type="html"><![CDATA[<p>python - m django –version 查看Django版本</p><p>django-admin startproject mysit</p>]]></content>
+    <content type="html"><![CDATA[<p>终端执行：py -m django –version(查看Django版本)<br>一、创建一个文件夹管理django项目文件<br>二、创建项目 Django-admin startproject mysite(项目名称)<br>三、启动项目的web服务器。在项目的根目录中执行: py manage.py runserver<br>(默认端口为8000，默认访问ip为本地。本地ip一般为127.0.0.1或者localhost  可以指定端口 py manage.py runserver 8000(端口号/0：端口号)<br>四、创建一个app py manage.py startapp polls<br>五、打开文件polls/views.py 并在加入以下Python代码：<br>    from django.http import HttpResponse<br>    def index(request):<br>        return HttpResponse(“Hello, Word.”)<br>六、在polls/views.py 文件中加入以下代码：<br>        from django.http import HttpResponse<br>        def index(request):<br>            return HttpResponse(“Hello, world.”)<br>七、在mysite/urls.py 文件中输入：<br>        from django.contrib import admin<br>        from django.urls import path, include</p><pre><code>urlpatterns = [    path(&apos;polls/&apos;, include(&apos;polls.urls&apos;))    path(&apos;admin/&apos;,admin.site.urls)]</code></pre><p>八、在项目根目录中执行： py manage.py runserver<br>(在浏览器中执行<a href="http://127.0.0.1:8000/polls/" target="_blank" rel="noopener">http://127.0.0.1:8000/polls/</a> (在Starting development server 显示的http地址，这里我执行显示的是<a href="http://127.0.0.1:8000/polls" target="_blank" rel="noopener">http://127.0.0.1:8000/polls</a> ))，一切正常的话你将看到“Hello, world”</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;python - m django –version 查看Django版本&lt;/p&gt;
-&lt;p&gt;django-admin startproject mysit&lt;/p&gt;
-
+        &lt;p&gt;终端执行：py -m django –version(查看Django版本)&lt;br&gt;一、创建一个文件夹管理django项目文件&lt;br&gt;二、创建项目 Django-admin startproject mysite(项目名称)&lt;br&gt;三、启动项目的web服务器。在项目的根目录
       
     
     </summary>
