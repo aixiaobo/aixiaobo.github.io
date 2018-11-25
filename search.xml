@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Walk Away]]></title>
+    <url>%2F2018%2F11%2F25%2Fwalk%20away%2F</url>
+    <content type="text"><![CDATA[《Walk Away》是歌手Dia Frampton第一张个人专辑《RED》里的一首歌。发行时间是2011-12-06，音乐时长是4:14。 创作背景 “Walk Away”的背景 “Walk Away” I wrote this song about a girl who was “given” to her father’s friends for entertainment at the ripe age of eight. Yes, true story. However, for the sake of her discretion, I won’t say any more. It made me very upset to hear the story, but even more upset to hear the ending. She never got any revenge, so I wanted to give it to her. In this song, she’s going back to get ‘em! （大意就是这首歌是作者根据真实故事写的，一个合适的年纪（只有八岁）的小女孩，被父亲”送给”那些狗友任其娱乐。故事的结局是小女孩并没有做出任何报复。作者认为很不值，就写这首歌，歌曲里，小女孩回来报复那些混蛋。）]]></content>
+      <categories>
+        <category>music</category>
+      </categories>
+      <tags>
+        <tag>Background of the song</tag>
+        <tag>Dia Frampton</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Django入门项目(第一部分：请求与响应)]]></title>
     <url>%2F2018%2F10%2F31%2FDjango%E5%85%A5%E9%97%A8%E9%A1%B9%E7%9B%AE-%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94%2F</url>
     <content type="text"><![CDATA[终端执行：py -m django --version(查看Django版本) 一、创建一个文件夹管理django项目文件 二、创建项目 Django-admin startproject mysite(项目名称) 三、启动项目的web服务器。在项目的根目录中执行: py manage.py runserver (默认端口为8000，默认访问ip为本地。本地ip一般为127.0.0.1或者localhost 可以指定端口 py manage.py runserver 8000(端口号/0：端口号) 四、创建一个app py manage.py startapp polls 五、打开文件polls/views.py 并在加入以下Python代码： from django.http import HttpResponse def index(request): return HttpResponse(&quot;Hello, Word.&quot;) 六、在polls/views.py 文件中加入以下代码： from django.http import HttpResponse def index(request): return HttpResponse(&quot;Hello, world.&quot;) 七、在mysite/urls.py 文件中输入： from django.contrib import admin from django.urls import path, include urlpatterns = [ path(&apos;polls/&apos;, include(&apos;polls.urls&apos;)) path(&apos;admin/&apos;,admin.site.urls) ] 八、在项目根目录中执行： py manage.py runserver (在浏览器中执行http://127.0.0.1:8000/polls/ (在Starting development server显示的http地址，这里我执行显示的是http://127.0.0.1:8000/polls ))，一切正常的话你将看到“Hello, world”]]></content>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aixiaobo.github.io/"/>
-  <updated>2018-10-31T12:10:32.270Z</updated>
+  <updated>2018-11-25T11:58:13.523Z</updated>
   <id>http://aixiaobo.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Walk Away</title>
+    <link href="http://aixiaobo.github.io/2018/11/25/walk%20away/"/>
+    <id>http://aixiaobo.github.io/2018/11/25/walk away/</id>
+    <published>2018-11-25T11:32:27.000Z</published>
+    <updated>2018-11-25T11:58:13.523Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>《Walk Away》是歌手Dia Frampton第一张个人专辑《RED》里的一首歌。发行时间是2011-12-06，音乐时长是4:14。</code></pre><p></p><h3>创作背景</h3><br>    “Walk Away”的背景 “Walk Away” I wrote this song about a girl who was “given” to her father’s friends for entertainment at the ripe age of eight. Yes, true story. However, for the sake of her discretion, I won’t say any more. It made me very upset to hear the story, but even more upset to hear the ending. She never got any revenge, so I wanted to give it to her. In this song, she’s going back to get ‘em!<br>    （大意就是这首歌是作者根据真实故事写的，一个合适的年纪（只有八岁）的小女孩，被父亲”送给”那些狗友任其娱乐。故事的结局是小女孩并没有做出任何报复。作者认为很不值，就写这首歌，歌曲里，小女孩回来报复那些混蛋。）<p></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;《Walk Away》是歌手Dia Frampton第一张个人专辑《RED》里的一首歌。发行时间是2011-12-06，音乐时长是4:14。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;h3&gt;创作背景&lt;/h3&gt;&lt;br&gt;    “Walk Away”的背景 “W
+      
+    
+    </summary>
+    
+      <category term="music" scheme="http://aixiaobo.github.io/categories/music/"/>
+    
+    
+      <category term="Background of the song" scheme="http://aixiaobo.github.io/tags/Background-of-the-song/"/>
+    
+      <category term="Dia Frampton" scheme="http://aixiaobo.github.io/tags/Dia-Frampton/"/>
+    
+  </entry>
   
   <entry>
     <title>Django入门项目(第一部分：请求与响应)</title>
