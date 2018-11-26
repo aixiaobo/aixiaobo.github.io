@@ -180,7 +180,7 @@ th {
   padding: 0;
 }
 ::selection {
-  background: #262a30;
+  background: $white-deep;
   color: #fff;
 }
 body {
@@ -2145,7 +2145,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff62e2;
+  background: #c945ff;
 }
 .links-of-blogroll {
   font-size: 13px;
