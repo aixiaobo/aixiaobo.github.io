@@ -2145,7 +2145,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff2e8;
+  background: #ffffa1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3332,7 +3332,7 @@ hr {
 }
 code {
   color: #ff7600;
-  background: #fbf7f8;
+  background: #fff;
   margin: 2px;
 }
 .highlight,
@@ -3370,19 +3370,6 @@ pre {
 }
 img.img-topic {
   width: 100%;
-}
-body {
-  background: url("https://source.unsplash.com/daily");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-}
-.main-inner {
-  margin-top: 60px;
-  padding: 60px 60px 60px 60px;
-  background: #fff;
-  opacity: 0.8;
-  min-height: 500px;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
