@@ -88,7 +88,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Django,入门," />
 
 
 
@@ -101,17 +101,18 @@
 
 
 
-<meta name="description" content="落霞与孤鹜齐飞，秋水共长天一色。">
-<meta name="keywords" content="Ai Xiaobo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="青青子衿，悠悠我心">
-<meta property="og:url" content="http://aixiaobo.github.io/tags/Javascript/index.html">
+<meta name="description" content="数据库的配置  settings.py   配置DATABASES常量 DATABASES = {     &amp;apos;default&amp;apos;: {         &amp;apos;ENGINE&amp;apos;: &amp;apos;django.db.backends.mysql&amp;apos;,         &amp;apos;NAME&amp;apos;: &amp;apos;mysite&amp;apos;,         &amp;ap">
+<meta name="keywords" content="Django,入门">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Diango入门项目-第二部分:模型和管理站点">
+<meta property="og:url" content="http://aixiaobo.github.io/2018/12/10/Diango入门项目-第二部分-模型和管理站点/index.html">
 <meta property="og:site_name" content="青青子衿，悠悠我心">
-<meta property="og:description" content="落霞与孤鹜齐飞，秋水共长天一色。">
+<meta property="og:description" content="数据库的配置  settings.py   配置DATABASES常量 DATABASES = {     &amp;apos;default&amp;apos;: {         &amp;apos;ENGINE&amp;apos;: &amp;apos;django.db.backends.mysql&amp;apos;,         &amp;apos;NAME&amp;apos;: &amp;apos;mysite&amp;apos;,         &amp;ap">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-10T01:03:04.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="青青子衿，悠悠我心">
-<meta name="twitter:description" content="落霞与孤鹜齐飞，秋水共长天一色。">
+<meta name="twitter:title" content="Diango入门项目-第二部分:模型和管理站点">
+<meta name="twitter:description" content="数据库的配置  settings.py   配置DATABASES常量 DATABASES = {     &amp;apos;default&amp;apos;: {         &amp;apos;ENGINE&amp;apos;: &amp;apos;django.db.backends.mysql&amp;apos;,         &amp;apos;NAME&amp;apos;: &amp;apos;mysite&amp;apos;,         &amp;ap">
 
 
 
@@ -141,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://aixiaobo.github.io/tags/Javascript/"/>
+  <link rel="canonical" href="http://aixiaobo.github.io/2018/12/10/Diango入门项目-第二部分-模型和管理站点/"/>
 
 
 
 
 
-  <title>标签: Javascript | 青青子衿，悠悠我心</title>
+  <title>Diango入门项目-第二部分:模型和管理站点 | 青青子衿，悠悠我心</title>
   
 
 
@@ -166,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://github.com/aixiaobo/aixiaobo.github.io" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -314,54 +315,430 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Javascript<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aixiaobo.github.io/2018/12/10/Diango入门项目-第二部分-模型和管理站点/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ai Xiaobo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/aibo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="青青子衿，悠悠我心">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/10/27/wuziqi/" itemprop="url">
-              
-                <span itemprop="name">黑白五子棋-self版</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Diango入门项目-第二部分:模型和管理站点</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-27T21:04:47+08:00"
-              content="2018-10-27" >
-          10-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T08:59:09+08:00">
+                2018-12-10
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Django/" itemprop="url" rel="index">
+                    <span itemprop="name">Django</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/12/10/Diango入门项目-第二部分-模型和管理站点/" class="leancloud_visitors" data-flag-title="Diango入门项目-第二部分:模型和管理站点">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span><span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <pre><code>数据库的配置
+
+settings.py 
+
+配置DATABASES常量
+DATABASES = {
+    &apos;default&apos;: {
+        &apos;ENGINE&apos;: &apos;django.db.backends.mysql&apos;,
+        &apos;NAME&apos;: &apos;mysite&apos;,
+        &apos;HOST&apos;: &apos;127.0.0.1&apos;,
+        &apos;PORT&apos;: 3306,
+        &quot;PASSWORD&quot;: &apos;123456&apos;,
+        &apos;USER&apos;: &apos;root&apos;
+    }
+}
+
+
+django项目的数据库定义同步到数据库
+
+若是配置使用mysql。执行此命令前需要在主目录的文件夹下的__init__.py文件中加入下面两行代码：
+import pymysql
+pymysql.install_as_MySQLdb()
+
+例如创建了mysite项目。则项目目录名为mysite。内部的主目录为mysite.
+文件的路径则为 mysite/mysite/__init__.py
+
+初次创建项目后可使用以下命令
+python manage.py migrate
+
+修改models.py文件后若要把models同步到数据库
+先把settings.py中的INSTALLED_APPS 加上修改的app
+   例如把新创建的app名称为 polls加入：  &apos;polls.apps.PollsConfig&apos;
+
+然后执行：python manage.py makemigrations
+执行成功后再执行: python manage.py migrate
+执行成功。则models.py中的数据库定义会同步到数据库
+创建成功会多出两个表
+
+
+django shell 环境的使用
+进入项目文件夹执行命令：python manage.py shell
+
+数据查询语法：  django 的 orm语法
+   查询model对应的数据库表的数据
+        所有数据： Question.objects.all()
+               此命令返回的是QuerySet类型。并不会随数据库数据实时更新
+                QuerySet相当于model类的实例的列表。每个实例相当于对应数据库表中的一条数据
+        按条件查询： Question.objects.filter
+               例如按照Question的id查询,查询id=1的数据：
+                       Question.objects.filter(id=1)
+                返回结果的类型是QuerySet。与objects.all()用法一致
+         查询指定条件的model实例.使用objects.get.例如：
+               q = Question.objects.get(id=1)
+                print(q.id)
+                * 注意：若指定的条件不存在对应的数据。则将报错
+                              若指定的条件存在对应的多条数据。也会报错。
+
+          模糊查询： 
+                   q_list = Question.objects.filter(question_text__startswith=&apos;今天&apos;)
+                    将查出question_text的文字中使用今天这两个字开头的所有数据
+           查询结果的排序：
+                    不指定排序字段的时候。一般会自动使用id  正序排序( ASC)
+                    指定排序字段。默认为正序排序     
+                       Question.objects.all().order_by(&quot;pub_date&quot;) 
+                    在指定排序字段前加上-号。会按此字段倒序排列（DESC）
+                         Question.objects.all().order_by(&quot;-pub_date&quot;)]              
+           利用外键查询：
+                        使用model中定义的ForeignKey 可以访问到对应的外键表数据
+                        例如： 
+                               question_1 = Question.objects.get(id=1)   # 取出question表id=1的数据
+                                choice_1 = Choice.objects.get(id=1)    #取出choice表id=1的数据
+                                 # Choice的question为ForeighKey类型的属性。并且指向了Question则：
+                                 choice_1.question 与 question_1的类型是相同的
+                           通过外键指定查询条件
+                                 Choice.objects.filter(question__pub_date__year=2018)
+                             上面的语句会查询出。choice表中对应的question  pub_date字段year=2018的所有      数据
+   新增数据：
+        创建对应model的实例，例如
+                   frmo django.utils import timezone
+                   q = Question(question_text=&apos;今天是星期几?&apos;, pub_date=timezone.now())
+                    q.save()
+        执行q.save()之后。数据会写入到数据库对应的表中
+
+
+更新数据：
+       需要先获取到对应数据库数据相对的model的实例，例如
+                   q = Question.objects.all()
+                    q1 = q[0]
+                    q1.question_text = &quot;xxxx&quot;
+                     q1.save()
+          执行save之后。数据库的数据会被更改
+
+
+删除数据：
+      可使用QuerySet调用 delete() 会删除查询到的所有数据,例如：
+                 删除所有数据:    Question.objects.all().delete()
+                 删除指定条件的数据： Question.objects.filter(id=5).delete()
+
+      也可以使用models的实例调用delete。 会删除数据库对应的那条数据.例如：
+                q  = Question.objects.filter(id=5)
+                 q[0].delete()
+                此时q[0]为Question的实例
+
+
+Admin
+      django默认设置的后台管理界面。登录地址默认为  http://127.0.0.1:8000/admin
+       需要添加管理员账号才可访问：
+
+       添加管理员账号的命令是：
+               进入项目根目录。也就是manage.py 所在的同一级目录
+                执行命令：python manage.py createsuperuser    会进入用户名。邮箱。密码的输入界面 。全部输入完毕后会提示    Superuser created successfully.   这时候输入的用户名就可以用来登录admin后台
+
+
+        把自定义的app中的model加入到后台进行管理：
+              1.定义model
+               2.在app目录下的admin.py文件中。导入要加入到后台管理的model 。然后添加注册语句，例如：
+                          from django.contrib import admin
+                          from .models import Question
+                           admin.site.register(Question)
+                            修改保存后。再次打开后台。登录成功即可管理Question对应的数据库表
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+<div>
+      
+        
+      
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Ai Xiaobo 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Ai Xiaobo 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Django/" rel="tag"><i class="fa fa-tag"></i> Django</a>
+          
+            <a href="/tags/入门/" rel="tag"><i class="fa fa-tag"></i> 入门</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+<div style="color: rgba(0, 0, 0, 0.75); font-size:13px; letter-spacing:3px">(&gt;看完记得五星好评哦亲&lt;)</div>
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/30/都是月亮惹的祸/" rel="next" title="月亮惹的祸">
+                <i class="fa fa-chevron-left"></i> 月亮惹的祸
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/10/Django入门项目-第三部分-视图和模板/" rel="prev" title="Django入门项目-第三部分：视图和模板">
+                Django入门项目-第三部分：视图和模板 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+      <!--MOB SHARE BEGIN-->
+<div class="-hoofoo-share-title">分享到：</div>
+<div class="-hoofoo-share-buttons">
+    <div class="-mob-share-weibo -hoofoo-share-weibo -hoofoo-share-ui-button"><i class="fa fa-weibo" aria-hidden="true"></i></div>
+    <div class="-mob-share-weixin -hoofoo-share-weixin -hoofoo-share-ui-button"><i class="fa fa-weixin" aria-hidden="true"></i></div>
+    <div class="-mob-share-qq -hoofoo-share-qq -hoofoo-share-ui-button"><i class="fa fa-qq" aria-hidden="true"></i></div>
+    <div class="-mob-share-twitter -hoofoo-share-twitter -hoofoo-share-ui-button"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+    <div class="-hoofoo-share-more -hoofoo-share-ui-button -mob-share-open"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+</div>
+<div class="-mob-share-ui" style="display: none">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
+        <li class="-mob-share-renren"><p>人人网</p></li>
+        <li class="-mob-share-kaixin"><p>开心网</p></li>
+        <li class="-mob-share-douban"><p>豆瓣</p></li>
+        <li class="-mob-share-youdao"><p>有道云笔记</p></li>
+        <li class="-mob-share-mingdao"><p>明道</p></li>
+        <li class="-mob-share-pengyou"><p>朋友网</p></li>
+        <li class="-mob-share-facebook"><p>Facebook</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-pocket"><p>Pocket</p></li>
+        <li class="-mob-share-google"><p>Google+</p></li>
+        <li class="-mob-share-tumblr"><p>Tumblr</p></li>
+        <li class="-mob-share-instapaper"><p>Instapaper</p></li>
+        <li class="-mob-share-linkedin"><p>Linkedin</p></li>
+    </ul>
+    <div class="-mob-share-close">取消</div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=292e70ba81f69"></script>
+<!--MOB SHARE END-->
+
+    </div>
+  </div>
 
 
           </div>
@@ -369,6 +746,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDU2OC8xNzA5NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -682,6 +1068,10 @@ show_date_time();
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -710,6 +1100,17 @@ show_date_time();
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
@@ -1161,6 +1562,23 @@ show_date_time();
 
   
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 12509,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
 

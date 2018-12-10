@@ -88,7 +88,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Django,入门," />
 
 
 
@@ -101,17 +101,18 @@
 
 
 
-<meta name="description" content="落霞与孤鹜齐飞，秋水共长天一色。">
-<meta name="keywords" content="Ai Xiaobo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="青青子衿，悠悠我心">
-<meta property="og:url" content="http://aixiaobo.github.io/tags/Javascript/index.html">
+<meta name="description" content="django测试  参考url: https://docs.djangoproject.com/en/2.1/intro/tutorial05/  测试编写原则是在功能实现前编写 django测试开始时会自动根据settings.py中的配置创建测试数据库。测试结束后。此数据库会自动删除 django自动测试的测试数据库未指定utf8编码。不能直接处理中文,若要支持中文需要调整编码。参考 http">
+<meta name="keywords" content="Django,入门">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django入门项目-第五部分:测试">
+<meta property="og:url" content="http://aixiaobo.github.io/2018/12/10/Django入门项目-第五部分-测试/index.html">
 <meta property="og:site_name" content="青青子衿，悠悠我心">
-<meta property="og:description" content="落霞与孤鹜齐飞，秋水共长天一色。">
+<meta property="og:description" content="django测试  参考url: https://docs.djangoproject.com/en/2.1/intro/tutorial05/  测试编写原则是在功能实现前编写 django测试开始时会自动根据settings.py中的配置创建测试数据库。测试结束后。此数据库会自动删除 django自动测试的测试数据库未指定utf8编码。不能直接处理中文,若要支持中文需要调整编码。参考 http">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-10T01:17:30.461Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="青青子衿，悠悠我心">
-<meta name="twitter:description" content="落霞与孤鹜齐飞，秋水共长天一色。">
+<meta name="twitter:title" content="Django入门项目-第五部分:测试">
+<meta name="twitter:description" content="django测试  参考url: https://docs.djangoproject.com/en/2.1/intro/tutorial05/  测试编写原则是在功能实现前编写 django测试开始时会自动根据settings.py中的配置创建测试数据库。测试结束后。此数据库会自动删除 django自动测试的测试数据库未指定utf8编码。不能直接处理中文,若要支持中文需要调整编码。参考 http">
 
 
 
@@ -141,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://aixiaobo.github.io/tags/Javascript/"/>
+  <link rel="canonical" href="http://aixiaobo.github.io/2018/12/10/Django入门项目-第五部分-测试/"/>
 
 
 
 
 
-  <title>标签: Javascript | 青青子衿，悠悠我心</title>
+  <title>Django入门项目-第五部分:测试 | 青青子衿，悠悠我心</title>
   
 
 
@@ -166,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://github.com/aixiaobo/aixiaobo.github.io" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -314,54 +315,507 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Javascript<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aixiaobo.github.io/2018/12/10/Django入门项目-第五部分-测试/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ai Xiaobo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/aibo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="青青子衿，悠悠我心">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/10/27/wuziqi/" itemprop="url">
-              
-                <span itemprop="name">黑白五子棋-self版</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Django入门项目-第五部分:测试</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-27T21:04:47+08:00"
-              content="2018-10-27" >
-          10-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-10T09:15:37+08:00">
+                2018-12-10
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Django/" itemprop="url" rel="index">
+                    <span itemprop="name">Django</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/12/10/Django入门项目-第五部分-测试/" class="leancloud_visitors" data-flag-title="Django入门项目-第五部分:测试">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span><span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <pre><code>django测试
+
+参考url: https://docs.djangoproject.com/en/2.1/intro/tutorial05/
+
+测试编写原则是在功能实现前编写
+django测试开始时会自动根据settings.py中的配置创建测试数据库。测试结束后。此数据库会自动删除
+django自动测试的测试数据库未指定utf8编码。不能直接处理中文,若要支持中文需要调整编码。参考 https://docs.djangoproject.com/en/2.1/topics/testing/overview/#the-test-database https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-TEST_CHARSET
+测试命令 python manage.py test 可以指定app进行测试。不指定则测试所有已配置的app
+django的测试方法每次执行时会清空对应的表
+编写mysite项目polls下的单元测试
+
+编写polls/tests.py文件
+
+from django.test import TestCase
+
+import datetime
+from django.utils import timezone
+import time
+
+from .models import Question
+
+
+class QuestionModelTests(TestCase):
+
+    def test_was_published_recently_with_future_question(self):
+        future_time = timezone.now() + datetime.timedelta(days=30)
+        future_question = Question(pub_date=future_time)
+        self.assertIs(future_question.was_published_recently(), False)
+
+    def test_was_published_recently_with_old_question(self):
+        old_time = timezone.now() - datetime.timedelta(days=1, seconds=1)
+        old_question = Question(pub_date=old_time)
+        self.assertIs(old_question.was_published_recently(), False)
+
+    def test_was_published_recently_with_recent_question(self):
+        recent_time = timezone.now() - datetime.timedelta(hours=23, minutes=59, seconds=59)
+        recent_question = Question(pub_date=recent_time)
+        self.assertIs(recent_question.was_published_recently(), True)
+然后运行测试
+
+python manage.py test polls
+或者
+python manage.py test
+会测试出有一个失败
+
+修改polls/models.py中的Question
+
+class Question(models.Model):
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField(&apos;date published&apos;)
+
+    def __str__(self):
+        &quot;&quot;&quot;
+        把question_text的值当做实例转为字符串的结果
+        :return:
+        &quot;&quot;&quot;
+        return &quot;id=%s,question_text=%s, this is __str__&quot; % (self.id, self.question_text)
+
+    def was_published_recently(self):
+        &quot;&quot;&quot;
+        Question的发布时间是否为1天之内，是则返回True,否则返回False
+        发布时间若晚于当前时间。也会返回False
+        :return:
+        &quot;&quot;&quot;
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) &lt;= self.pub_date &lt;= now
+运行测试，测试通过
+
+django测试工具之一 Client的使用
+
+clinet可以模拟一个模板渲染环境。让开发者不通过浏览器也可以模拟url的访问
+
+先进入项目的shell环境
+
+python manage.py shell
+然后导入setup_test_enviroment
+
+&gt;&gt;&gt; from django.test.utils import setup_test_environment
+&gt;&gt;&gt; setup_test_environment()
+使用client:
+
+&gt;&gt;&gt; from django.test import Client
+&gt;&gt;&gt; client = Client()
+# 使用client获取指定地址的返回结果
+&gt;&gt;&gt; response = client.get(&apos;/&apos;)
+Not Found: /
+# 返回结果的http code
+&gt;&gt;&gt; response.status_code
+404
+&gt;&gt;&gt; from django.urls import reverse
+&gt;&gt;&gt; reverse(&apos;polls:index&apos;)
+&apos;/polls/&apos;
+&gt;&gt;&gt; response = client.get(reverse(&apos;polls:index&apos;))
+&gt;&gt;&gt; response.status_code
+200
+# response.content 获取所访问地址的html代码
+&gt;&gt;&gt; response.content
+... 此处应显示所访问地址返回的网页html代码。过长故省略显示
+# response.context可以获取到view传递给模板的数据通过key获取
+&gt;&gt;&gt; response.context[&apos;lasted_question_list&apos;]
+&lt;QuerySet [&lt;Question: id=13,question_text=零食买什么？, this is __str__&gt;, &lt;Quest
+ion: id=2,question_text=今天天气不错！挺风和日丽的！, this is __str__&gt;, &lt;Questio
+n: id=12,question_text=不吃饭的时候吃什么？, this is __str__&gt;, &lt;Question: id=11,
+question_text=今天夜宵吃什么？, this is __str__&gt;, &lt;Question: id=10,question_text
+=今天晚饭吃什么？, this is __str__&gt;]&gt;
+调整polls/views.py文件中类IndexView 中的方法get_queryset:
+
+
+class IndexView(generic.ListView):
+    template_name = &apos;polls/index.html&apos;
+    context_object_name = &apos;lasted_question_list&apos;
+
+    def get_queryset(self):
+        # pub_date__lte=timezone.now() 是判断pub_date小于等于当前时间
+        return Question.objects.filter(pub_date__lte=timezone.now()).order_by(&quot;-pub_date&quot;)[:5]
+
+然后我们编写测试代码 修改polls/tests.py
+
+首先我们创建一个辅助测试的方法
+
+def create_question(question_text, days):
+    publish_time = timezone.now() + datetime.timedelta(days=days)
+    # 直接使用传入的数据创建数据库的数据,创建成功则返回Question的实例
+    return Question.objects.create(question_text=question_text,
+                                   pub_date=publish_time)
+然后为polls的index页面创建测试方法：
+
+class QuestionIndexViewTests(TestCase):
+
+    def test_no_questions(self):
+        response = self.client.get(reverse(&apos;polls:index&apos;))
+        self.assertEqual(response.status_code, 200)
+        # 判断返回结果response中是否包含指定的字符串
+        self.assertContains(response, &apos;没有待投票的问题&apos;)
+        self.assertQuerysetEqual(response.context[&apos;lasted_question_list&apos;], [])
+
+    def test_past_question(self):
+        # create_question(&apos;过去发布的question&apos;, -30)
+        create_question(&apos;past question&apos;, -30)
+        response = self.client.get(reverse(&apos;polls:index&apos;))
+        self.assertQuerysetEqual(response.context[&apos;lasted_question_list&apos;],
+                                 [&apos;&lt;Question: past question&gt;&apos;])
+
+    def test_future_question(self):
+        # create_question(&apos;未来发布的question&apos;, 30)
+        create_question(&quot;future question&quot;, 30)
+        response = self.client.get(reverse(&apos;polls:index&apos;))
+        self.assertContains(response, &apos;没有待投票的问题&apos;)
+        self.assertQuerysetEqual(response.context[&quot;lasted_question_list&quot;],
+                                 [])
+
+    def test_future_question_and_past_question(self):
+        # create_question(&apos;过去发布的question&apos;, -30)
+        create_question(&apos;past question&apos;, -30)
+        # create_question(&apos;未来发布的question&apos;, 30)
+        create_question(&apos;future question&apos;, 30)
+        response = self.client.get(reverse(&apos;polls:index&apos;))
+        self.assertQuerysetEqual(response.context[&apos;lasted_question_list&apos;],
+                                 [&apos;&lt;Question: past question&gt;&apos;])
+
+    def test_two_past_question(self):
+        # create_question(&apos;30天前的数据&apos;, -30)
+        # create_question(&apos;5天前的数据&apos;, -5)
+        create_question(&apos;past question 30 days&apos;, -30)
+        create_question(&apos;past question 5 days&apos;, -5)
+        response = self.client.get(reverse(&apos;polls:index&apos;))
+        self.assertQuerysetEqual(
+            response.context[&apos;lasted_question_list&apos;],
+            [&apos;&lt;Question: past question 5 days&gt;&apos;, &apos;&lt;Question: past question 30 days&gt;&apos;]
+        )
+修改polls的detail页面对应的view解决用户通过url还能够访问未来发布的question的问题： polls/views.py
+
+class DetailView(generic.DetailView):
+    model = Question
+    template_name = &apos;polls/detail.html&apos;
+
+    def get_queryset(self):
+        return Question.objects.filter(pub_date__lte=timezone.now())
+修改polls/tests.py 编写测试类和测试方法。对detail页面的view进行测试:
+
+class QuestionDetailViewTests(TestCase):
+    &quot;&quot;&quot;
+    测试点击问题后的详情页面detail相关的view
+    &quot;&quot;&quot;
+
+    def test_future_question(self):
+        future_question = create_question(question_text=&apos;Future question&apos;, days=5)
+        url = reverse(&apos;polls:detail&apos;, args=(future_question.id, ))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 404)
+
+    def test_past_question(self):
+        past_question = create_question(question_text=&apos;Past Question&apos;, days=-5)
+        url = reverse(&apos;polls:detail&apos;, args=(past_question.id, ))
+        response = self.client.get(url)
+        # 断言页面输出结果里包含问题的question_text
+        self.assertContains(response, past_question.question_text)
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+<div>
+      
+        
+      
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Ai Xiaobo 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Ai Xiaobo 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Django/" rel="tag"><i class="fa fa-tag"></i> Django</a>
+          
+            <a href="/tags/入门/" rel="tag"><i class="fa fa-tag"></i> 入门</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+<div style="color: rgba(0, 0, 0, 0.75); font-size:13px; letter-spacing:3px">(&gt;看完记得五星好评哦亲&lt;)</div>
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/10/Django入门项目-第四部分-表单和通用视图/" rel="next" title="Django入门项目-第四部分：表单和通用视图">
+                <i class="fa fa-chevron-left"></i> Django入门项目-第四部分：表单和通用视图
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/10/Django入门项目-第六部分-静态文件的配置与使用/" rel="prev" title="Django入门项目-第六部分:静态文件的配置与使用">
+                Django入门项目-第六部分:静态文件的配置与使用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+      <!--MOB SHARE BEGIN-->
+<div class="-hoofoo-share-title">分享到：</div>
+<div class="-hoofoo-share-buttons">
+    <div class="-mob-share-weibo -hoofoo-share-weibo -hoofoo-share-ui-button"><i class="fa fa-weibo" aria-hidden="true"></i></div>
+    <div class="-mob-share-weixin -hoofoo-share-weixin -hoofoo-share-ui-button"><i class="fa fa-weixin" aria-hidden="true"></i></div>
+    <div class="-mob-share-qq -hoofoo-share-qq -hoofoo-share-ui-button"><i class="fa fa-qq" aria-hidden="true"></i></div>
+    <div class="-mob-share-twitter -hoofoo-share-twitter -hoofoo-share-ui-button"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+    <div class="-hoofoo-share-more -hoofoo-share-ui-button -mob-share-open"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+</div>
+<div class="-mob-share-ui" style="display: none">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
+        <li class="-mob-share-renren"><p>人人网</p></li>
+        <li class="-mob-share-kaixin"><p>开心网</p></li>
+        <li class="-mob-share-douban"><p>豆瓣</p></li>
+        <li class="-mob-share-youdao"><p>有道云笔记</p></li>
+        <li class="-mob-share-mingdao"><p>明道</p></li>
+        <li class="-mob-share-pengyou"><p>朋友网</p></li>
+        <li class="-mob-share-facebook"><p>Facebook</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-pocket"><p>Pocket</p></li>
+        <li class="-mob-share-google"><p>Google+</p></li>
+        <li class="-mob-share-tumblr"><p>Tumblr</p></li>
+        <li class="-mob-share-instapaper"><p>Instapaper</p></li>
+        <li class="-mob-share-linkedin"><p>Linkedin</p></li>
+    </ul>
+    <div class="-mob-share-close">取消</div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=292e70ba81f69"></script>
+<!--MOB SHARE END-->
+
+    </div>
+  </div>
 
 
           </div>
@@ -369,6 +823,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDU2OC8xNzA5NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -682,6 +1145,10 @@ show_date_time();
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -710,6 +1177,17 @@ show_date_time();
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
@@ -1161,6 +1639,23 @@ show_date_time();
 
   
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 12509,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
 
