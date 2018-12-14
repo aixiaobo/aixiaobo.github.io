@@ -101,18 +101,18 @@
 
 
 
-<meta name="description" content="落霞与孤鹜齐飞，秋水共长天一色。">
+<meta name="description" content="1.安装pillow库 在终端执行：pip install pillow  2.打开代码编辑器（最好使用pycharm） from PIL import Image    IMG=&amp;apos;D:\Code\python\\test1\\ascii_dora.png&amp;apos;    WIDTH=60   HEIGHT=45    ascii_char = list(&amp;quot;$@B%8&amp;amp">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python实现图片转字符串">
 <meta property="og:url" content="http://aixiaobo.github.io/2018/12/14/python实现图片转字符串/index.html">
 <meta property="og:site_name" content="青青子衿，悠悠我心">
-<meta property="og:description" content="落霞与孤鹜齐飞，秋水共长天一色。">
+<meta property="og:description" content="1.安装pillow库 在终端执行：pip install pillow  2.打开代码编辑器（最好使用pycharm） from PIL import Image    IMG=&amp;apos;D:\Code\python\\test1\\ascii_dora.png&amp;apos;    WIDTH=60   HEIGHT=45    ascii_char = list(&amp;quot;$@B%8&amp;amp">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-14T07:20:57.191Z">
+<meta property="og:updated_time" content="2018-12-14T07:58:49.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python实现图片转字符串">
-<meta name="twitter:description" content="落霞与孤鹜齐飞，秋水共长天一色。">
+<meta name="twitter:description" content="1.安装pillow库 在终端执行：pip install pillow  2.打开代码编辑器（最好使用pycharm） from PIL import Image    IMG=&amp;apos;D:\Code\python\\test1\\ascii_dora.png&amp;apos;    WIDTH=60   HEIGHT=45    ascii_char = list(&amp;quot;$@B%8&amp;amp">
 
 
 
@@ -460,7 +460,46 @@
       
 
       
-        
+        <pre><code>1.安装pillow库
+在终端执行：pip install pillow
+
+2.打开代码编辑器（最好使用pycharm）
+from PIL import Image  
+
+IMG=&apos;D:\Code\python\\test1\\ascii_dora.png&apos;  
+
+WIDTH=60  
+HEIGHT=45  
+
+ascii_char = list(&quot;$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~&lt;&gt;i!lI;:,\&quot;^`&apos;. &quot;)  
+
+#将256灰度映射到70个字符上  
+def get_char(r,g,b,alpha=256):#alpha透明度  
+    if alpha==0:  
+        return &apos; &apos;  
+    length=len(ascii_char)  
+    gray=int(0.2126*r+0.7152*g+0.0722*b)#计算灰度  
+    unit=(256.0+1)/length  
+    return ascii_char[int(gray/unit)]#不同的灰度对应着不同的字符  
+    #通过灰度来区分色块  
+
+if __name__==&apos;__main__&apos;:  
+    im=Image.open(IMG)  
+    im=im.resize((WIDTH,HEIGHT),Image.NEAREST)  
+    txt=&quot;&quot;  
+    for i in range(HEIGHT):  
+        for j in range(WIDTH):  
+            txt+=get_char(*im.getpixel((j,i)))  
+        txt+=&apos;\n&apos;  
+
+    print (txt)  
+    #写入文件
+    with open(&quot;output.txt&quot;,&apos;w&apos;) as f:  
+        f.write(txt)
+
+    这是效果图
+    ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
+</code></pre>
       
     </div>
     
