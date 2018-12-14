@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aixiaobo.github.io/"/>
-  <updated>2018-12-14T07:09:01.701Z</updated>
+  <updated>2018-12-14T07:20:57.191Z</updated>
   <id>http://aixiaobo.github.io/</id>
   
   <author>
@@ -17,11 +17,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python实现图片转字符串</title>
+    <link href="http://aixiaobo.github.io/2018/12/14/python%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://aixiaobo.github.io/2018/12/14/python实现图片转字符串/</id>
+    <published>2018-12-14T07:18:58.000Z</published>
+    <updated>2018-12-14T07:20:57.191Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="黑科技" scheme="http://aixiaobo.github.io/categories/%E9%BB%91%E7%A7%91%E6%8A%80/"/>
+    
+    
+      <category term="python" scheme="http://aixiaobo.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网页版微信定时自动给好友发消息</title>
     <link href="http://aixiaobo.github.io/2018/12/14/%E5%BE%AE%E4%BF%A1%E5%AE%9A%E6%97%B6%E8%87%AA%E5%8A%A8%E7%BB%99%E5%A5%BD%E5%8F%8B%E5%8F%91%E6%B6%88%E6%81%AF/"/>
     <id>http://aixiaobo.github.io/2018/12/14/微信定时自动给好友发消息/</id>
     <published>2018-12-14T06:57:30.000Z</published>
-    <updated>2018-12-14T07:09:01.701Z</updated>
+    <updated>2018-12-14T07:20:31.128Z</updated>
     
     <content type="html"><![CDATA[<pre><code>操作步骤：    1.登陆网页版微信    2.打开开发者工具（F12）    3.打开 console 控制台    4.粘贴一下代码到控制台并回车实现原理：    1.遍历好友列表    2.修改输入框文本    3.点击发送源代码：    循环发送（每隔3秒发送一次）：        function show(){        $(&apos;.edit_area&apos;).html(&apos;需要发送的文字&apos;);        $(&quot;.edit_area&quot;).trigger($.Event(&quot;keydown&quot;, { keyCode: 13,ctrlKey: true}));        $(&apos;.btn_send&apos;).click();        }        var sh;        sh=setInterval(show,3000);         clearInterval(sh);  //这行用来停止发送        new Date().toLocaleString()， //回车，查看输出的信息；    定时发送（需注意日期格式）:        setInterval(function(){        if(new Date().toLocaleString().indexOf(&apos;2015/8/31 下午4:02:00&apos;)===0)        {        $(&apos;.edit_area&apos;).html(&apos;需要发送的文字&apos;);        $(&quot;.edit_area&quot;).trigger($.Event(&quot;keydown&quot;, { keyCode: 13,ctrlKey: true}));        $(&apos;.btn_send&apos;).click();        }        },1000);        setInterval(function(){ if(new Date().toLocaleString().indexOf(&apos;6/3/2013 8:00:00 PM&apos;)===0) { $(&apos;.chatSend&apos;)[0].click() }},1000);</code></pre>]]></content>
     
@@ -44,10 +62,10 @@
     
     </summary>
     
-      <category term="Django" scheme="http://aixiaobo.github.io/categories/Django/"/>
+      <category term="黑科技" scheme="http://aixiaobo.github.io/categories/%E9%BB%91%E7%A7%91%E6%8A%80/"/>
     
     
-      <category term="python" scheme="http://aixiaobo.github.io/tags/python/"/>
+      <category term="黑科技" scheme="http://aixiaobo.github.io/tags/%E9%BB%91%E7%A7%91%E6%8A%80/"/>
     
   </entry>
   
