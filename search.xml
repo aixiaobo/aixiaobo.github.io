@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[HEXO博客添加在线联系功能]]></title>
+    <url>%2F2018%2F12%2F15%2FHEXO%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E5%B7%A5%E5%85%B7%2F</url>
+    <content type="text"><![CDATA[Hexo博客如何添加在线联系功能呢,发现了一个不错的网站可以提供在线联系的服务，当有用户在网页上给你留言后会通过邮件或者微信通知你，可以及时的解答用户的疑问。 最终的效果可以参考我博客的右下角,有个聊天的按钮,效果如下所示: 配置方法如下:首先到DaoVoice上注册一个账号,注册完成后会得到一个app_id，获取appid的步骤如下图所示: 以next主题为例,打开/themes/next/layout/_partials/head.swig文件添加如下： {% if theme.daovoice %} (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice") daovoice('init', { app_id: "{{theme.daovoice_app_id}}" }); daovoice('update'); {% endif %} 接着打开主题配置文件_config.yml，添加如下代码： # Online contact daovoice: true daovoice_app_id: 这里输入前面获取的app_id 最后执行hexo clean &amp;&amp; hexo g &amp;&amp; hexo s就能看到效果了。 需要注意的是,next主题下聊天的按钮会和其他按钮重叠到一起，可以到聊天设置，修改下按钮的位置: 最后到右上角选择管理员，微信绑定,可以绑定你的微信号，关注公众号后打开小程序，就可以实时收发消息，有新的消息也会通过微信通知，设置页面如下:]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python实现图片转字符串]]></title>
     <url>%2F2018%2F12%2F14%2Fpython%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%2F</url>
     <content type="text"><![CDATA[1.安装pillow库 在终端执行：pip install pillow 2.打开代码编辑器（最好使用pycharm） from PIL import Image IMG=&apos;D:\Code\python\\test1\\ascii_dora.png&apos; WIDTH=60 HEIGHT=45 ascii_char = list(&quot;$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~&lt;&gt;i!lI;:,\&quot;^`&apos;. &quot;) #将256灰度映射到70个字符上 def get_char(r,g,b,alpha=256):#alpha透明度 if alpha==0: return &apos; &apos; length=len(ascii_char) gray=int(0.2126*r+0.7152*g+0.0722*b)#计算灰度 unit=(256.0+1)/length return ascii_char[int(gray/unit)]#不同的灰度对应着不同的字符 #通过灰度来区分色块 if __name__==&apos;__main__&apos;: im=Image.open(IMG) im=im.resize((WIDTH,HEIGHT),Image.NEAREST) txt=&quot;&quot; for i in range(HEIGHT): for j in range(WIDTH): txt+=get_char(*im.getpixel((j,i))) txt+=&apos;\n&apos; print (txt) #写入文件 with open(&quot;output.txt&quot;,&apos;w&apos;) as f: f.write(txt) 第二种方法： from PIL import Image codeLib = &apos;&apos;&apos;@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~&lt;&gt;i!lI;:,&quot;^`&apos;. &apos;&apos;&apos;#生成字符画所需的字符集 count = len(codeLib) def transform1(image_file): image_file = image_file.convert(&quot;L&quot;)#转换为黑白图片，参数&quot;L&quot;表示黑白模式 codePic = &apos;&apos; for h in range(0,image_file.size[1]): #size属性表示图片的分辨率，&apos;0&apos;为横向大小，&apos;1&apos;为纵向 for w in range(0,image_file.size[0]): gray = image_file.getpixel((w,h)) #返回指定位置的像素，如果所打开的图像是多层次的图片，那这个方法就返回一个元组 codePic = codePic + codeLib[int(((count-1) * gray) / 256)]#建立灰度与字符集的映射 codePic = codePic + &apos;\r\n&apos; return codePic def transform2(image_file): codePic = &apos;&apos; for h in range(0,image_file.size[1]): for w in range(0,image_file.size[0]): g,r,b = image_file.getpixel((w,h)) gray = int(r * 0.299 + g * 0.587+b * 0.114) codePic = codePic + codeLib[int(((count-1) * gray)/256)] codePic = codePic+&apos;\r\n&apos; return codePic fp = open(u&apos;11.png&apos;,&apos;rb&apos;) image_file = Image.open(fp) image_file=image_file.resize((int(image_file.size[0] * 0.25), int(image_file.size[0] * 0.15)))#调整图片大小 tmp = open(&apos;tmp.txt&apos;,&apos;w&apos;) tmp.write(transform1(image_file)) tmp.close() 这是原图 这是效果图]]></content>
