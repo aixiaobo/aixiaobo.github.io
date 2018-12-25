@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aixiaobo.github.io/"/>
-  <updated>2018-12-25T06:56:16.256Z</updated>
+  <updated>2018-12-15T12:30:05.507Z</updated>
   <id>http://aixiaobo.github.io/</id>
   
   <author>
@@ -15,45 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>兄弟组成员圣诞快乐</title>
-    <link href="http://aixiaobo.github.io/2018/12/25/%E5%9C%A3%E8%AF%9E%E5%BF%AB%E4%B9%901/"/>
-    <id>http://aixiaobo.github.io/2018/12/25/圣诞快乐1/</id>
-    <published>2018-12-25T06:55:02.000Z</published>
-    <updated>2018-12-25T06:56:16.256Z</updated>
-    
-    <content type="html"><![CDATA[<!DOCTYPE html><html><head><title>兄弟组成员圣诞快乐</title><style type="text/css">body {    background: #FFF;}.container {    position: absolute;    left: 300px;    top: 50px;}.socks {    position: absolute;    top: 80px;    left: 10px;    z-index: 1;    transform: rotate(10deg);}.socks.two {    position: absolute;    top: 143px;    left: -40px;    z-index: 1;    transform: rotate(-10deg);}.socks:hover {    animation: 1.9s deco linear infinite;}.top {    position: absolute;    width: 15px;    height: 35px;    background: #E54B4B;    border-radius: 5px;}.foot {    position: absolute;    top: 20px;    left: 0;    width: 25px;    height: 15px;    border-radius: 30px;    background: #E54B4B;}.foot.two {    position: absolute;    top: 20px;    left: -10px;    width: 25px;    height: 15px;    border-radius: 30px;    background: #E54B4B;}.tree {    position: absolute;}.base {    width: 210px;    height: 10px;    background: #CCC;    position: absolute;    top: 304px;    left: -45px;    border-radius: 100%;}.base:after {    content: '';    width: 20px;    height: 20px;    background: #84714F;    position: absolute;    top: -25px;    left: 83px;}.layer {    position: absolute;    width: 0;    height: 0;    border-left: 50px solid transparent;    border-right: 50px solid transparent;    border-bottom: 100px solid #499F68;}.layer.two {    position: absolute;    top: 30px;    left: -10px;    border-left: 60px solid transparent;    border-right: 60px solid transparent;    border-bottom: 120px solid #499F68;}.layer.three {    position: absolute;    top: 50px;    left: -30px;    border-left: 80px solid transparent;    border-right: 80px solid transparent;    border-bottom: 160px solid #499F68;}.layer.four {    position: absolute;    top: 80px;    left: -50px;    border-left: 100px solid transparent;    border-right: 100px solid transparent;    border-bottom: 200px solid #499F68;}.bauble {    z-index: 1;    position: absolute;    border-radius: 100%;}.bauble.one {    top: 65px;    width: 13px;    height: 13px;    background: #FFE066;}.bauble.two {    top: 105px;    left: -30px;    width: 13px;    height: 13px;    background: #FFE066;}.bauble.three {    top: 110px;    left: 15px;    width: 13px;    height: 13px;    background: #FFE066;}.bauble.four {    top: 163px;    left: -30px;    width: 13px;    height: 13px;    background: #FFE066;}.deco {    position: absolute;    top: 130px;    left: 30px;    width: 50px;    height: 20px;    background: #EF476F;    /*   border-radius: 100% 100% 100% 100%; */        transform: rotate(0deg);}.deco:after {} .line {    z-index: 1;    position: absolute;    top: 70px;    left: -43px;    width: 70px;    height: 0;    background: #FFE066;    border: 1px dashed #FFF;    transform: rotate(-30deg);}.line.two {    top: 93px;    left: -50px;    width: 85px;    height: 0;    background: #FFE066;    border: 1px dashed #FFF;    transform: rotate(-30deg);}.line.three {    top: 123px;    left: -60px;    width: 106px;    height: 0;    background: #FFE066;    border: 1px dashed #FFF;    transform: rotate(-30deg);}.line.four {    top: 153px;    left: -80px;    width: 136px;    height: 0;    background: #FFE066;    border: 1px dashed #FFF;    transform: rotate(-30deg);}.pressie {    z-index: 1;    position: absolute;    top: 250px;    left: 120px;    width: 60px;    height: 60px;    background: #F45B69;}.cover {    position: absolute;    left: -3px;    width: 66px;    height: 10px;    background: #F45B69;    border-bottom: 1px solid #AAA;}.wrap {    position: absolute;    left: 25px;    background: #59C3C3;    width: 10px;    height: 60px;}.ribbon {    position: absolute;    top: -30px;    left: 10px;    background: #FFF;    width: 12px;    height: 25px;    border-radius: 0 80% 20% 80%;    border: 3px solid #59C3C3;    transform: rotate(-10deg);}.ribbon:after {    position: absolute;    top: 0;    left: 20px;    background: #FFF;    width: 12px;    height: 25px;    border-radius: 0 80% 20% 80%;    border: 3px solid #59C3C3;    transform: rotate(60deg);    content: '';}.pressie:hover {    animation: 0.5s move linear infinite;}@keyframes move {    0% {        transform: rotate(10deg)    }    50% {        transform: rotate(-30deg)    }    100% {        transform: rotate(10deg)    }}@keyframes deco {    0% {        transform: rotate(5deg)    }    50% {        transform: rotate(-10deg)    }    100% {        transform: rotate(5deg)    }}.light {    box-shadow: 1px 1px 10px #CCC, -2px 1px 10px #CCC, 0 -1px 10px #CCC}.star {    z-index: 1;    position: absolute;    left: -49px;    top: -40px;    display: block;    color: red;    width: 0px;    height: 0px;    border-right: 100px solid transparent;    border-bottom: 70px solid #FFE066;    border-left: 100px solid transparent;    transform: rotate(35deg) scale(.2);}.star:before {    border-bottom: 80px solid #FFE066;    border-left: 30px solid transparent;    border-right: 30px solid transparent;    position: absolute;    height: 0;    width: 0;    top: -45px;    left: -65px;    display: block;    content: '';    transform: rotate(-35deg);}.star:after {    position: absolute;    display: block;    color: red;    top: 3px;    left: -105px;    width: 0px;    height: 0px;    border-right: 100px solid transparent;    border-bottom: 70px solid #FFE066;    border-left: 100px solid transparent;    transform: rotate(-70deg);    content: '';}.star.two {    transform: rotate(23deg) scale(.1);    position: absolute;    top: 102px;    left: -60px;}.star-light {}#z1{    width: 300px;    height: 250px;    position: absolute;    top: 80px;    left: 10px;    display: none;}</style></head><body><script src="http://wow.techbrood.com/libs/jquery/jquery-1.11.1.min.js"></script><div class="zy">    <a href="http://b218.photo.store.qq.com/psb?/V14eynZf05uw60/OTRx4mlhbGjaauc3vTcJI9ybDPFcrO4MSz61lBYudVo!/b/dNoAAAAAAAAA&amp;amp;bo=gAc4BIAHOAQFACM!&rf=viewer_311" target="_blank" rel="noopener"><img id="z1" src="http://b218.photo.store.qq.com/psb?/V14eynZf05uw60/OTRx4mlhbGjaauc3vTcJI9ybDPFcrO4MSz61lBYudVo!/b/dNoAAAAAAAAA&amp;amp;bo=gAc4BIAHOAQFACM!&rf=viewer_311"></a></div><h3>圣诞快乐呀<p id="z2" style="color: red;">❤</p><p>戳红心试试看</p><p></p></h3><div class="container">    <div class="star"></div>    <div class="pressie">        <div class="cover"></div>        <div class="wrap"> </div>        <div class="ribbon"></div>    </div>    <div class="tree">        <div class="base"> </div>        <div class="layer">            <div class="line"> </div>            <div class="bauble one"></div>        </div>        <div class="layer two">            <div class="line two"> </div>            <div class="bauble two"></div>            <div class="socks">                <div class="top"> </div>                <div class="foot"></div>            </div>        </div>        <div class="layer three">            <div class="line three"> </div>            <div class="bauble three"></div>            <div class="socks two">                <div class="top"> </div>                <div class="foot two"></div>            </div>        </div>    </div>    <div class="layer four">        <div class="bauble four"></div>        <div class="star two"></div>        <div class="line four"> </div>    </div></div><br><br><br></body></html><script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script><script type="text/javascript">$('.container').on('mouseover', function() {    $('.bauble').addClass('light');    $('.star').addClass('star-light');})$('.container').on('mouseout', function() {    $('.bauble').removeClass('light');})$('#z2').click(function(){    $('#z1').toggle()})</script><video autoplay loop>    <source src="http://win.web.ra01.sycdn.kuwo.cn/edb4466a0dfaff142a0e3a8eda297169/5c203301/resource/n3/74/63/2062191177.mp3" type="audio/mpeg"></video>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-
-
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;title&gt;兄弟组成员圣诞快乐&lt;/title&gt;
-	&lt;style type=&quot;text/css&quot;&gt;
-		body {
-    background: #FFF;
-}
-.container {
-    positi
-      
-    
-    </summary>
-    
-      <category term="html" scheme="http://aixiaobo.github.io/categories/html/"/>
-    
-    
-      <category term="html" scheme="http://aixiaobo.github.io/tags/html/"/>
-    
-      <category term="圣诞" scheme="http://aixiaobo.github.io/tags/%E5%9C%A3%E8%AF%9E/"/>
-    
-  </entry>
   
   <entry>
     <title>HEXO博客添加在线联系功能</title>
