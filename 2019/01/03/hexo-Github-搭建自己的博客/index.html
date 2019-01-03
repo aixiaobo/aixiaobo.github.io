@@ -88,7 +88,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -101,17 +101,45 @@
 
 
 
-<meta name="description" content="落霞与孤鹜齐飞，秋水共长天一色。">
-<meta name="keywords" content="Ai Xiaobo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="青青子衿，悠悠我心">
-<meta property="og:url" content="http://aixiaobo.github.io/archives/2018/12/index.html">
+<meta name="description" content="其实平时自己写的文章并不多，偶尔看到一些东西会做点笔记，但是每次写的东西都会到处放，不好找，所以才想着自己搭建一个人博客网站，现在大家用hexo比较多，也比较方便，并且能使用的主题也很多,所以我就用它了。 1.安装Git Bash我一直不太喜欢在cmd中操作各种命令，所以挑了这个比较好使的Git Bash,我的是windows环境，所以下载windows版本并安装就可以了。下载地址安装步骤：双击下">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo+Github 搭建自己的博客">
+<meta property="og:url" content="http://aixiaobo.github.io/2019/01/03/hexo-Github-搭建自己的博客/index.html">
 <meta property="og:site_name" content="青青子衿，悠悠我心">
-<meta property="og:description" content="落霞与孤鹜齐飞，秋水共长天一色。">
+<meta property="og:description" content="其实平时自己写的文章并不多，偶尔看到一些东西会做点笔记，但是每次写的东西都会到处放，不好找，所以才想着自己搭建一个人博客网站，现在大家用hexo比较多，也比较方便，并且能使用的主题也很多,所以我就用它了。 1.安装Git Bash我一直不太喜欢在cmd中操作各种命令，所以挑了这个比较好使的Git Bash,我的是windows环境，所以下载windows版本并安装就可以了。下载地址安装步骤：双击下">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/fMj6WRT87N6lRrDFV4k44Lu3dIc3OXN2AtUj4xsW.OY!/b/dL8AAAAAAAAA&bo=YAJKAAAAAAADBwo!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/yiV*AFxqxsmAQ6BLFMAtEzhI1h3werlonwNYQ4hyELk!/b/dDQBAAAAAAAA&bo=WAE.AAAAAAADF1U!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/VMIeHxzVKeDBn6TJGltBcBMj01Zba9yKzQWg4jKPoDk!/b/dLgAAAAAAAAA&bo=ogFJAQAAAAADF9k!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/R*HznNxBLuy0KHqADiOLC5MYHSuKxC1cEkZ75U2CBuE!/b/dLYAAAAAAAAA&bo=GQKHAAAAAAADB74!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/I1mqVBm3BgJ52eLFiSb1mpv0sKTm.vkKHKa8Ue0ozhY!/b/dDYBAAAAAAAA&bo=GQJfAQAAAAADF3c!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/cfgs5sMaBmvo2eJa6e5gtQKybTelsWQmIerd1A0IpSs!/b/dL8AAAAAAAAA&bo=zwJJAAAAAAADF7Y!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/swwAqEcdMedc4jV1yRp1*8cMfwMLHQFSE4EE7q4Ee9Y!/b/dLgAAAAAAAAA&bo=zQK5AAAAAAADF0Q!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/ugRfy*YqoTEVWpS2d4RyKhqGcH0QwGAr7nou2LR5vlo!/b/dEgBAAAAAAAA&bo=FQIUAQAAAAADFzA!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/zeYojhdAMLBENbVIIrrINVAHRLwzODyV84V0IA*x5hs!/b/dFIBAAAAAAAA&bo=CQJ8AgAAAAADF0c!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/3pk.sLQRe*wLVgvF3dm1wWd8menFvhbZGmIJO*MsyVA!/b/dFIBAAAAAAAA&bo=CQLsAQAAAAADF9Q!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/HUJS4XSBNcdkiAQJqam5VTE1BcLcbn.KzMOkIbNiTls!/b/dDQBAAAAAAAA&bo=EgKYAAAAAAADF7o!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/96Mrh.RebB2Y8zZhSaheSHwPaulQ2f2jfbRTaswFq64!/b/dL8AAAAAAAAA&bo=DwI6AAAAAAADFwU!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/xYmUc8.fyonzV5GlUW3i67iNyJtByIwPjO7VcY0CEsI!/b/dDYBAAAAAAAA&bo=FQJHAAAAAAADF2I!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/Lnj7GtEaE8f9QlAppF3.TQ98ISjen.4tnH9OoN1gD*I!/b/dLgAAAAAAAAA&bo=gQJ8AAAAAAADF80!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/sEo3r.Dw3kSf6as1yHkQXvngTvKaAC9LXNM2nJuKmZo!/b/dLYAAAAAAAAA&bo=EAJIAAAAAAADB3g!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/yRanxO63HSf0AU4HcSjNGenl5xVfe4fpV.nAkqIM8Vk!/b/dFYBAAAAAAAA&bo=GwJCAAAAAAADB3k!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/wclzt6miYQZRhgOnK5wot*wRM2YwtAYKBWgOCus.l1Q!/b/dL8AAAAAAAAA&bo=tAP.AAAAAAADF3s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/9RmEa241wbDYhFgOq8.jWFI6TU5KXqC3qL3YtXn5F2A!/b/dL8AAAAAAAAA&bo=yAPPAQAAAAADJwc!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/hBy0ImPXMI6TpQVX5QW6RMXH*6DSOSr96*Enu8aVnNQ!/b/dL4AAAAAAAAA&bo=FQJ4AAAAAAADF10!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/**k8E3qw46SswJFNn.KWYYzF1t6Dd3BoREXF*PskCc0!/b/dL8AAAAAAAAA&bo=7AKJAAAAAAADB0U!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/x90icnvPLaana89BxjZMwiExiJH476VLdIg6J5Sl5Qs!/b/dL8AAAAAAAAA&bo=5QPkAQAAAAADFzE!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/FgJ5BX70UYsS93K98c0FSEQAUsvcmLHWBkbDTDpHe*E!/b/dFUAAAAAAAAA&bo=FwJCAAAAAAADF2U!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/zm7q9bUhpEJlzX8KXizWugmShXMMzbrZOuQzb5Zw1S0!/b/dLgAAAAAAAAA&bo=GgKRAAAAAAADF7s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/3IzsLG0rZJdDhRqazInjcUZL0.fkBz4i9H2KlS2Tnso!/b/dL8AAAAAAAAA&bo=FwJYAAAAAAADF38!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/WpA0iuEnAo7LfBg9modS5iYJ3rsh3jGm2BWtZcqo.6g!/b/dLkAAAAAAAAA&bo=FwLEAAAAAAADF.M!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/*uOwNebeb.MghsddqJbK1idC8Mu0uO5NHZdpzvPAr.E!/b/dLwAAAAAAAAA&bo=4QMTAgAAAAADJ*E!&rf=viewer_4">
+<meta property="og:updated_time" content="2019-01-03T07:01:06.858Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="青青子衿，悠悠我心">
-<meta name="twitter:description" content="落霞与孤鹜齐飞，秋水共长天一色。">
+<meta name="twitter:title" content="hexo+Github 搭建自己的博客">
+<meta name="twitter:description" content="其实平时自己写的文章并不多，偶尔看到一些东西会做点笔记，但是每次写的东西都会到处放，不好找，所以才想着自己搭建一个人博客网站，现在大家用hexo比较多，也比较方便，并且能使用的主题也很多,所以我就用它了。 1.安装Git Bash我一直不太喜欢在cmd中操作各种命令，所以挑了这个比较好使的Git Bash,我的是windows环境，所以下载windows版本并安装就可以了。下载地址安装步骤：双击下">
+<meta name="twitter:image" content="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/fMj6WRT87N6lRrDFV4k44Lu3dIc3OXN2AtUj4xsW.OY!/b/dL8AAAAAAAAA&bo=YAJKAAAAAAADBwo!&rf=viewer_4">
 
 
 
@@ -141,13 +169,13 @@
 
 
 
-  <link rel="canonical" href="http://aixiaobo.github.io/archives/2018/12/"/>
+  <link rel="canonical" href="http://aixiaobo.github.io/2019/01/03/hexo-Github-搭建自己的博客/"/>
 
 
 
 
 
-  <title>归档 | 青青子衿，悠悠我心</title>
+  <title>hexo+Github 搭建自己的博客 | 青青子衿，悠悠我心</title>
   
 
 
@@ -166,7 +194,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://github.com/aixiaobo/aixiaobo.github.io" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -314,370 +342,333 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aixiaobo.github.io/2019/01/03/hexo-Github-搭建自己的博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ai Xiaobo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/aibo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="青青子衿，悠悠我心">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">hexo+Github 搭建自己的博客</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-03T13:56:46+08:00">
+                2019-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 16 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/黑科技/" itemprop="url" rel="index">
+                    <span itemprop="name">黑科技</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/01/03/hexo-Github-搭建自己的博客/" class="leancloud_visitors" data-flag-title="hexo+Github 搭建自己的博客">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span><span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
-        
-        
-        
+      
+        <p>其实平时自己写的文章并不多，偶尔看到一些东西会做点笔记，但是每次写的东西都会到处放，不好找，所以才想着自己搭建一个人博客网站，现在大家用hexo比较多，也比较方便，并且能使用的主题也很多,所以我就用它了。</p>
+<p></p><h3>1.安装Git Bash</h3><br>我一直不太喜欢在cmd中操作各种命令，所以挑了这个比较好使的Git Bash,我的是windows环境，所以下载windows版本并安装就可以了。<br><a href="https://gitforwindows.org/" target="_blank" rel="noopener">下载地址</a><br>安装步骤：双击下载好的exe文件，一路next就好啦<br>安装好后，打开gitbash，查看版本：<br>命令：git version<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/fMj6WRT87N6lRrDFV4k44Lu3dIc3OXN2AtUj4xsW.OY!/b/dL8AAAAAAAAA&bo=YAJKAAAAAAADBwo!&rf=viewer_4"><p></p>
+<p></p><h3>2.安装NodJs</h3><br>Hexo是基于NodeJS环境的静态博客，里面的npm工具很有用啊，所以还是老老实实把这玩意儿装了吧。<br><a href="https://nodejs.org/en/" target="_blank" rel="noopener">下载地址</a>(说明：LTS为长期支持版，Current为当前最新版)<p></p>
+<p>安装步骤：反正下载好msi文件后，双击打开安装，也是一路next，不过在Custom Setup这一步记得选Add to PATH ,这样你就不用自己去配置电脑上环境变量了，装完在按 win + r 快捷键调出运行，然后输入cmd确定，在cmd中输入path可以看到你的node是否配置在里面（环境变量），没有的话你就自由发挥吧。<br>查看版本：node -v<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/yiV*AFxqxsmAQ6BLFMAtEzhI1h3werlonwNYQ4hyELk!/b/dDQBAAAAAAAA&bo=WAE.AAAAAAADF1U!&rf=viewer_4"></p>
+<p></p><h3>3.安装hexo</h3><br>看到这么多安装，千万不要紧张，小哥哥小姐姐们一定要稳住，别怕，因为后面的东西都是在gitbash中用npm工具安装就好了。<p></p>
+<p>在自己认为合适的地方创个文件夹，我是在D盘建了一个blog文件夹。然后通过命令行进入到该文件夹里面</p>
+<p>输入npm install hexo -g，开始安装Hexo<br>安装完成后，查看版本：hexo -v<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/VMIeHxzVKeDBn6TJGltBcBMj01Zba9yKzQWg4jKPoDk!/b/dLgAAAAAAAAA&bo=ogFJAQAAAAADF9k!&rf=viewer_4"></p>
+<p>初始化命令：hexo init ，初始化完成之后打开所在的文件夹可以看到一些文件夹：<br>node_modules：是依赖包<br>public：存放的是生成的页面<br>scaffolds：命令生成文章等的模板<br>source：用命令创建的各种文章<br>themes：主题</p>
+<p></p><p>_config.yml:整个博客的配置</p><br>db.json：source解析所得到的<br>package.json：项目所需模块项目的配置信息<p></p>
+<p>做好这些前置工作之后接下来的就是各种配配配置了。<br>输入npm install，安装所需要的组件<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/R*HznNxBLuy0KHqADiOLC5MYHSuKxC1cEkZ75U2CBuE!/b/dLYAAAAAAAAA&bo=GQKHAAAAAAADB74!&rf=viewer_4"></p>
+<p>输入hexo g，首次体验Hexo<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/I1mqVBm3BgJ52eLFiSb1mpv0sKTm.vkKHKa8Ue0ozhY!/b/dDYBAAAAAAAA&bo=GQJfAQAAAAADF3c!&rf=viewer_4"></p>
+<p> 输入hexo s，开启服务器，访问该网址，正式体验Hexo<br> <img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/cfgs5sMaBmvo2eJa6e5gtQKybTelsWQmIerd1A0IpSs!/b/dL8AAAAAAAAA&bo=zwJJAAAAAAADF7Y!&rf=viewer_4"></p>
+<p> 问题：假如页面一直无法跳转，那么可能端口被占用了。此时我们ctrl+c停止服务器，接着输入“hexo server -p 端口号”来改变端口号<br> <img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/swwAqEcdMedc4jV1yRp1*8cMfwMLHQFSE4EE7q4Ee9Y!/b/dLgAAAAAAAAA&bo=zQK5AAAAAAADF0Q!&rf=viewer_4"></p>
+<p> 那么出现如下图就成功了<br> <img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/ugRfy*YqoTEVWpS2d4RyKhqGcH0QwGAr7nou2LR5vlo!/b/dEgBAAAAAAAA&bo=FQIUAQAAAAADFzA!&rf=viewer_4"></p>
+<p></p><h3>4. 生成SSH并添加到github</h3><br>没账号的创建账号，有账号的看下面。<br>项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/zeYojhdAMLBENbVIIrrINVAHRLwzODyV84V0IA*x5hs!/b/dFIBAAAAAAAA&bo=CQJ8AgAAAAADF0c!&rf=viewer_4"><br>在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub Pages，你会看到那边有个网址，访问它，你将会惊奇的发现该项目已经被部署到网络上，能够通过外网来访问它。<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/3pk.sLQRe*wLVgvF3dm1wWd8menFvhbZGmIJO*MsyVA!/b/dFIBAAAAAAAA&bo=CQLsAQAAAAADF9Q!&rf=viewer_4"><p></p>
+<p>设置Git的user name和email（如果是第一次的话）<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/HUJS4XSBNcdkiAQJqam5VTE1BcLcbn.KzMOkIbNiTls!/b/dDQBAAAAAAAA&bo=EgKYAAAAAAADF7o!&rf=viewer_4"><br>上图是在其文件夹里面鼠标右键，点击Git Base Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱</p>
+<p>输入cd ~/.ssh，检查是否有.ssh的文件夹<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/96Mrh.RebB2Y8zZhSaheSHwPaulQ2f2jfbRTaswFq64!/b/dL8AAAAAAAAA&bo=DwI6AAAAAAADFwU!&rf=viewer_4"><br><br><br>输入ls,列出该文件下的内容。下图说明存在<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/xYmUc8.fyonzV5GlUW3i67iNyJtByIwPjO7VcY0CEsI!/b/dDYBAAAAAAAA&bo=FQJHAAAAAAADF2I!&rf=viewer_4"><br><br><br>输入ssh-keygen -t rsa -C “<a href="mailto:18737330364@qq.com" target="_blank" rel="noopener">18737330364@qq.com</a>”，连续三个回车，生成密钥，最后得到了两个文件：id_rsa和id_rsa.pub（默认存储路径是：C:\Users\Administrator.ssh）。<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/Lnj7GtEaE8f9QlAppF3.TQ98ISjen.4tnH9OoN1gD*I!/b/dLgAAAAAAAAA&bo=gQJ8AAAAAAADF80!&rf=viewer_4"><br><br><br>输入eval “$(ssh-agent -s)”，添加密钥到ssh-agent<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/sEo3r.Dw3kSf6as1yHkQXvngTvKaAC9LXNM2nJuKmZo!/b/dLYAAAAAAAAA&bo=EAJIAAAAAAADB3g!&rf=viewer_4"><br><br><br>再输入ssh-add ~/.ssh/id_rsa，添加生成的SSH key到ssh-agent<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/yRanxO63HSf0AU4HcSjNGenl5xVfe4fpV.nAkqIM8Vk!/b/dFYBAAAAAAAA&bo=GwJCAAAAAAADB3k!&rf=viewer_4"></p>
+<p>登录Github，点击头像下的settings，添加ssh<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/wclzt6miYQZRhgOnK5wot*wRM2YwtAYKBWgOCus.l1Q!/b/dL8AAAAAAAAA&bo=tAP.AAAAAAADF3s!&rf=viewer_4"></p>
+<p>新建一个new ssh key，将id_rsa.pub文件里的内容复制上去<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/9RmEa241wbDYhFgOq8.jWFI6TU5KXqC3qL3YtXn5F2A!/b/dL8AAAAAAAAA&bo=yAPPAQAAAAADJwc!&rf=viewer_4"></p>
+<p>输入ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>，测试添加ssh是否成功。如果看到Hi后面是你的用户名，就说明成功了<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/hBy0ImPXMI6TpQVX5QW6RMXH*6DSOSr96*Enu8aVnNQ!/b/dL4AAAAAAAAA&bo=FQJ4AAAAAAADF10!&rf=viewer_4"><br>问题：假如ssh-key配置失败，那么只要以下步骤就能完全解决</p>
+<p>首先，清除所有的key-pair<br>ssh-add -D<br>rm -r ~/.ssh<br>删除你在github中的public-key<br><br><br>重新生成ssh密钥对<br>ssh-keygen -t rsa -C “<a href="mailto:xxx@xxx.com" target="_blank" rel="noopener">xxx@xxx.com</a>“<br><br><br>接下来正常操作<br>在github上添加公钥public-key:<br>1、首先在你的终端运行 xclip -sel c ~/.ssh/id_rsa.pub将公钥内容复制到剪切板<br>2、在github上添加公钥时，直接复制即可<br>3、保存</p>
+<p>测试：<br>在终端 ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></p>
+<p></p><h3>5.配置Deployment</h3><br>在其文件夹中，找到_config.yml文件，修改repo值（在末尾）<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/**k8E3qw46SswJFNn.KWYYzF1t6Dd3BoREXF*PskCc0!/b/dL8AAAAAAAAA&bo=7AKJAAAAAAADB0U!&rf=viewer_4"><br>repo值是你在github项目里的ssh（右下角）<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/x90icnvPLaana89BxjZMwiExiJH476VLdIg6J5Sl5Qs!/b/dL8AAAAAAAAA&bo=5QPkAQAAAAADFzE!&rf=viewer_4"><p></p>
+<p></p><h3>6.新建一篇博客</h3><br>在cmd执行命令：hexo new post “博客名”<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/FgJ5BX70UYsS93K98c0FSEQAUsvcmLHWBkbDTDpHe*E!/b/dFUAAAAAAAAA&bo=FwJCAAAAAAADF2U!&rf=viewer_4"><p></p>
+<p>这时候在文件夹_posts目录下将会看到已经创建的文件<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/zm7q9bUhpEJlzX8KXizWugmShXMMzbrZOuQzb5Zw1S0!/b/dLgAAAAAAAAA&bo=GgKRAAAAAAADF7s!&rf=viewer_4"></p>
+<p>在生成以及部署文章之前，需要安装一个扩展：npm install hexo-deployer-git –save<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/3IzsLG0rZJdDhRqazInjcUZL0.fkBz4i9H2KlS2Tnso!/b/dL8AAAAAAAAA&bo=FwJYAAAAAAADF38!&rf=viewer_4"></p>
+<p>使用编辑器编好文章，那么就可以使用命令：hexo d -g，生成以及部署了<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/WpA0iuEnAo7LfBg9modS5iYJ3rsh3jGm2BWtZcqo.6g!/b/dLkAAAAAAAAA&bo=FwLEAAAAAAADF.M!&rf=viewer_4"></p>
+<p>部署成功后访问你的地址：http://用户名.github.io   那么将看到生成的文章<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/*uOwNebeb.MghsddqJbK1idC8Mu0uO5NHZdpzvPAr.E!/b/dLwAAAAAAAAA&bo=4QMTAgAAAAADJ*E!&rf=viewer_4"></p>
+<p>好了，到此为止，最基本的也是最全面的hexo+github搭建博客完结。</p>
 
+      
+    </div>
+    
+    
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+<div>
+      
         
+      
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Ai Xiaobo 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Ai Xiaobo 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
+            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+<div style="color: rgba(0, 0, 0, 0.75); font-size:13px; letter-spacing:3px">(&gt;看完记得五星好评哦亲&lt;)</div>
+            <div id="wpac-rating"></div>
           </div>
         
-        
 
         
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/12/15/HEXO博客添加在线聊天工具/" itemprop="url">
-              
-                <span itemprop="name">HEXO博客添加在线联系功能</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-15T19:58:34+08:00"
-              content="2018-12-15" >
-          12-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        </div>
+      
       
 
-        
-        
-        
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/03/python实现12306抢票/" rel="next" title="python实现12306抢票">
+                <i class="fa fa-chevron-left"></i> python实现12306抢票
+              </a>
+            
+          </div>
 
-        
-        
+          <span class="post-nav-divider"></span>
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/14/python实现图片转字符串/" itemprop="url">
-              
-                <span itemprop="name">python实现图片转字符串</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-14T15:18:58+08:00"
-              content="2018-12-14" >
-          12-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/14/微信定时自动给好友发消息/" itemprop="url">
-              
-                <span itemprop="name">网页版微信定时自动给好友发消息</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-14T14:57:30+08:00"
-              content="2018-12-14" >
-          12-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/10/Django入门项目-第七部分-定制admin站点/" itemprop="url">
-              
-                <span itemprop="name">Django入门项目-第七部分:定制admin站点</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-10T09:21:46+08:00"
-              content="2018-12-10" >
-          12-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/10/Django入门项目-第六部分-静态文件的配置与使用/" itemprop="url">
-              
-                <span itemprop="name">Django入门项目-第六部分:静态文件的配置与使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-10T09:19:59+08:00"
-              content="2018-12-10" >
-          12-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/10/Django入门项目-第五部分-测试/" itemprop="url">
-              
-                <span itemprop="name">Django入门项目-第五部分:测试</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-10T09:15:37+08:00"
-              content="2018-12-10" >
-          12-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/10/Django入门项目-第四部分-表单和通用视图/" itemprop="url">
-              
-                <span itemprop="name">Django入门项目-第四部分：表单和通用视图</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-10T09:07:42+08:00"
-              content="2018-12-10" >
-          12-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/10/Django入门项目-第三部分-视图和模板/" itemprop="url">
-              
-                <span itemprop="name">Django入门项目-第三部分：视图和模板</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-10T09:04:09+08:00"
-              content="2018-12-10" >
-          12-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/10/Diango入门项目-第二部分-模型和管理站点/" itemprop="url">
-              
-                <span itemprop="name">Diango入门项目-第二部分:模型和管理站点</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-10T08:59:09+08:00"
-              content="2018-12-10" >
-          12-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-    </div>
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+      <!--MOB SHARE BEGIN-->
+<div class="-hoofoo-share-title">分享到：</div>
+<div class="-hoofoo-share-buttons">
+    <div class="-mob-share-weibo -hoofoo-share-weibo -hoofoo-share-ui-button"><i class="fa fa-weibo" aria-hidden="true"></i></div>
+    <div class="-mob-share-weixin -hoofoo-share-weixin -hoofoo-share-ui-button"><i class="fa fa-weixin" aria-hidden="true"></i></div>
+    <div class="-mob-share-qq -hoofoo-share-qq -hoofoo-share-ui-button"><i class="fa fa-qq" aria-hidden="true"></i></div>
+    <div class="-mob-share-twitter -hoofoo-share-twitter -hoofoo-share-ui-button"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+    <div class="-hoofoo-share-more -hoofoo-share-ui-button -mob-share-open"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+</div>
+<div class="-mob-share-ui" style="display: none">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
+        <li class="-mob-share-renren"><p>人人网</p></li>
+        <li class="-mob-share-kaixin"><p>开心网</p></li>
+        <li class="-mob-share-douban"><p>豆瓣</p></li>
+        <li class="-mob-share-youdao"><p>有道云笔记</p></li>
+        <li class="-mob-share-mingdao"><p>明道</p></li>
+        <li class="-mob-share-pengyou"><p>朋友网</p></li>
+        <li class="-mob-share-facebook"><p>Facebook</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-pocket"><p>Pocket</p></li>
+        <li class="-mob-share-google"><p>Google+</p></li>
+        <li class="-mob-share-tumblr"><p>Tumblr</p></li>
+        <li class="-mob-share-instapaper"><p>Instapaper</p></li>
+        <li class="-mob-share-linkedin"><p>Linkedin</p></li>
+    </ul>
+    <div class="-mob-share-close">取消</div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=292e70ba81f69"></script>
+<!--MOB SHARE END-->
+
+    </div>
+  </div>
 
 
           </div>
@@ -685,6 +676,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDU2OC8xNzA5NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -707,8 +707,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -846,6 +855,22 @@ show_date_time();
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">1.安装Git Bash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">2.安装NodJs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">3.安装hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">4. 生成SSH并添加到github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">5.配置Deployment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">6.新建一篇博客</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -998,6 +1023,10 @@ show_date_time();
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1026,6 +1055,17 @@ show_date_time();
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
@@ -1477,6 +1517,23 @@ show_date_time();
 
   
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 12509,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
 
