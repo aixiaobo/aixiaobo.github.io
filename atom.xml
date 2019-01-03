@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aixiaobo.github.io/"/>
-  <updated>2018-12-15T12:30:05.507Z</updated>
+  <updated>2019-01-03T04:01:17.911Z</updated>
   <id>http://aixiaobo.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python实现12306抢票</title>
+    <link href="http://aixiaobo.github.io/2019/01/03/python%E5%AE%9E%E7%8E%B012306%E6%8A%A2%E7%A5%A8/"/>
+    <id>http://aixiaobo.github.io/2019/01/03/python实现12306抢票/</id>
+    <published>2019-01-03T02:44:17.000Z</published>
+    <updated>2019-01-03T04:01:17.911Z</updated>
+    
+    <content type="html"><![CDATA[<p>临近春节了，大家也都开始抢火车票了，大家每年过年也要抢火车票回去过年。我还记得去年过年用软件抢了一个月都没抢到，当时计划第二天返程上班，当天坐在电脑前不停的刷新，提交订单，在无数次的点击刷新下，还真让我手动刷新抢到了难能可贵的返程票。</p><p>用Python代替手工去不停的刷新，检测到余票马上点进去提交订单，提交订单成功后发邮件通知我去支付，30 分钟内支付成功就购票成功了。</p><p></p><h3>目录</h3><br>抢票效果<br>splinter 库安装导入<br>准备工作：初始化属性<br>登录功能实现<br>邮件通知实现<br>查票功能实现<br>买票功能实现<p></p><p></p><h3>抢票效果</h3><br>运行代码后，Splinter 会自动启动浏览器，代替手工去操作页面，执行打印日志如下。<br>请输入验证码…<br>开始购票…<br>第1次点击查询…<br>第2次点击查询…<br>第3次点击查询…<br>第4次点击查询…<br>第5次点击查询…<br>第6次点击查询…<br>第7次点击查询…<br>第8次点击查询…<br>预订失败…<br>开始预订…<br>开始选择用户…<br>提交订单…<br>确认选座…<br>预订成功…<br>抢票通知邮件发送成功！<br>抢票成功后，我们会收到抢票成功的邮件。<p></p><p>同时，火车票订单中有一张刚才待支付的火车票，手动支付成功后就完成整个抢票流程了。</p><p></p><h3>splinter 库安装导入</h3><br>这次用到的库是 Splinter，Splinter是一个使用Python测试Web应用程序的开源工具。它允许你自动执行浏览器操作，例如访问 URL 和与其项目交互，和 Selenium 库类似。<p></p><p></p><h3>使用 pip 命令直接安装。</h3><br>pip install splinter<p></p><p>我用的 Python 环境是 Python3，用的编辑器是 Pycharm，编辑器大家可自行选择。安装后导入即可用。</p><p></p><h3>准备工作</h3><br>在开始写购票程序之前，我们得先建一个购票类，并初始化实例属性，初始化各种相关链接，定义好浏览器（我用的是 Chrome 浏览器）和浏览器驱动的保存路径。<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/*nENkAtfiBcKQuEIWv.oQXswlhU4RR3xBmHjnG4L0dE!/b/dLkAAAAAAAAA&bo=sQTqAgAAAAADB38!&rf=viewer_4"><p></p><p></p><h3>登录功能实现</h3><br>登录页面需要三要素：用户名、密码、图形验证码，用户名和密码我们直接通过自动化输入完成，图形验证码太复杂，用自动化识别输入的话正确率不高，我们直接手动输入好了。登录成功后和刚才初始化的登录 URL 匹配，匹配成功则表示登录成功。<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/3rz744lSfCByw1dzsafOdBQnKeg5QvKznkWkD5qpOTg!/b/dL8AAAAAAAAA&bo=OARDAwAAAAADB14!&rf=viewer_4"><p></p><p></p><h3>邮件通知功能</h3><br>我们先定义下邮件通知函数，等下购票成功后直接调用这个函数发邮件就可。发邮件功能的程序可以参考我的github地址：<a href="https://github.com/aixiaobo/email" target="_blank" rel="noopener">https://github.com/aixiaobo/email</a><br>建议用QQ邮箱，因为 QQ 邮箱绑定微信和 QQ 后，通知更及时。<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/iaozC1D87syJbCf*RLmBq4z7j6*4f1CY1pobHPtlyjc!/b/dL4AAAAAAAAA&bo=gAQpAwAAAAADB4w!&rf=viewer_4"><p></p><p></p><h3>查票功能实现</h3><br>接下来，我们在买票功能中先写好查票的功能，定义好查询的信息并添加到 cookie 中，cookie 信息我们可以在调试信息中查看。我们主要用到的是图中标示的乘车日期、出发地、目的地。<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/W9eSo*YAk3yz.ZhPtLnPLrJ9a38XgYdstGQmH6zoEwc!/b/dDQBAAAAAAAA&bo=BQVUAgAAAAARB2Y!&rf=viewer_4"><br>接下来我们对火车票进行查询判断，如果没票的话就持续的点击查询按钮直到有票为止，当然有时候也会出现网络不好或者 12306 的服务不稳定，出现查询异常的情况。<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/aivcm0tdzP69TWGScuviNKYnV7qIBB4qi66qIzylpUs!/b/dLYAAAAAAAAA&bo=FAURAgAAAAADByA!&rf=viewer_4"><br>遇到这些情况，程序会持续的重复查询直到有数据显示，部分代码如下。<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/4hepsGRuyoLGk4WjkfmIiVgdIOwC1tdm.djTWkl*oBE!/b/dLYAAAAAAAAA&bo=SAQlAwAAAAADB0g!&rf=viewer_4"><p></p><p></p><h3>买票功能实现</h3><br>一旦有票就会点击预定按钮进入预定流程，选择乘车人并提交订单。<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/lvqNZ0T1mKdMlxu3wUG38zlicn4qgQYUTC.RemTscxA!/b/dFIBAAAAAAAA&bo=OQQ3AQAAAAADByk!&rf=viewer_4"><br>提交订单后有确认选座的提示，点击确定后订票订单就生成了，生成后调用刚才定义的发邮件程序。<br>最后，主函数里给出必须传的一些参数：用户名、登录密码、乘车人姓名、乘车日期、出发地 cookie、目的地 cookie、邮件标题、邮件内容，调用购票程序，搞定！<br><img src="http://m.qpic.cn/psb?/V10FYvF64cCkdZ/EYMk9w0s6WFgbt2hBzF9oksNhgDWjuKZIlcYU65aLhA!/b/dL8AAAAAAAAA&bo=1QMBAgAAAAADB*c!&rf=viewer_4"><p></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;临近春节了，大家也都开始抢火车票了，大家每年过年也要抢火车票回去过年。我还记得去年过年用软件抢了一个月都没抢到，当时计划第二天返程上班，当天坐在电脑前不停的刷新，提交订单，在无数次的点击刷新下，还真让我手动刷新抢到了难能可贵的返程票。&lt;/p&gt;
+&lt;p&gt;用Python代替手工去
+      
+    
+    </summary>
+    
+      <category term="黑科技" scheme="http://aixiaobo.github.io/categories/%E9%BB%91%E7%A7%91%E6%8A%80/"/>
+    
+    
+      <category term="python" scheme="http://aixiaobo.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>HEXO博客添加在线联系功能</title>
